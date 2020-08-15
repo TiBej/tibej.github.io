@@ -54,7 +54,7 @@ tr.borderBottomSeperate>td {
 
 /*table:hover .tr-striped:nth-of-type(odd) {
     background-color: transparent;
-}
+}*/
 tr.tr-striped:hover {
     background-color: lightyellow !important;
 }
@@ -75,7 +75,7 @@ tr>th:hover::after {
     height: 10000px;
     width: 100%;
     z-index: -1;
-}*/
+}
 
 .toolTable>td {
     cursor: pointer;
