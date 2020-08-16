@@ -30,6 +30,10 @@ div.overflowScrollX {
     overflow-x: scroll;
 }
 
+.toolTable>td>span {
+    height: 260px;
+}
+
 .tr-striped:nth-of-type(odd) {
     background-color: rgba(249, 249, 249, 0.5);
 }
@@ -55,21 +59,16 @@ tr.borderBottomSeperate>td {
     width: 255px !important;
 }
 
-
-/*table:hover .tr-striped:nth-of-type(odd) {
-    background-color: transparent;
+.backgroundWhite {
+    background-color: white;
 }
-tr.tr-striped:hover {
-    background-color: lightyellow !important;
-}*/
 
 td,
 th {
     position: relative !important;
 }
 
-tr>td:hover::after,
-tr>th:hover::after {
+tr>td:not(.tableContentLeftImp):not(.notSelectDown):hover:after {
     content: "";
     position: absolute;
     background-color: lightyellow;
@@ -80,8 +79,7 @@ tr>th:hover::after {
     z-index: -1;
 }
 
-tr>td:hover::before,
-tr>th:hover::before {
+tr:not(.borderBottomSeperate)>td:hover::before {
     content: "";
     position: absolute;
     background-color: lightyellow;
@@ -99,11 +97,15 @@ tr>th:hover::before {
 
 .toolTable>td:hover,
 .toolTable>td>span:hover {
-    color: #0645BC !important;
+    font-weight: bold
 }
 
-td.bold {
-    font-weight: bold;
+.toolTable>td:not(.notSelectDown) {
+    padding-bottom: 0px;
+}
+
+td.hightlight {
+    color: red;
 }
 
 .spaceSpan {
@@ -113,4 +115,13 @@ td.bold {
 
 .whiteSpaceNoWrap {
     white-space: nowrap;
+}
+
+.iconRotate {
+    transform: rotate(90deg);
+}
+
+small {
+    padding-top: 26px;
+    display: block;
 }

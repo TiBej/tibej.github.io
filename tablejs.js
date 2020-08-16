@@ -419,6 +419,7 @@ var app = new Vue({
         sortKey: 1,
         filterKey: '',
         search: '',
+        activeFilterArr: [],
 
         reverse: false,
         toolList: JSON.parse(jsonToolList).tool,
@@ -447,12 +448,11 @@ var app = new Vue({
                 return t.name.toLowerCase().includes(self.search.toLowerCase());
             });
 
+
             // filter num
-            if (!isNaN(parseInt(self.filterKey))) {
-                self.tools = self.tools.filter(function(t) {
-                    return t.scenario.includes(parseInt(self.filterKey))
-                });
-            }
+            self.tools = self.tools.filter(function(t) {
+                return self.activeFilterArr.every(r => t.scenario.includes(r))
+            });
 
             return self.tools;
         }
@@ -469,33 +469,38 @@ var app = new Vue({
             } else {
                 self.sortKey = 1;
             }
-            //self.sortKey = parseInt(sortKey) + 1;
-            //if (self.sortKey == key) {
-            //    self.sortDir = (self.sortDir == "asc") ? 'desc' : 'asc';
-            //} else {
-            //    self.sortDir = "desc";
-            //    self.sortKey = key;
-            //}
         },
         filterBy: function(key) {
             var self = this;
-            if (self.filterKey == key) {
-                self.filterKey = '';
+            var keyParsed = parseInt(key);
+            if (self.activeFilterArr.includes(keyParsed)) {
+                self.activeFilterArr.remove(keyParsed);
             } else {
-                self.filterKey = key;
+                self.activeFilterArr.push(parseInt(keyParsed));
             }
         }
     }
 });
 
 $(document).ready(function() {
-    $(".toolTable>td").click(function() {
-        var clickedElement = $(this);
-        var boldElement = $(".toolTable>td.bold");
+    $(".toolTable>td:not(.notSelectDown)").click(function() {
+        $(this).toggleClass("hightlight");
 
-        $(".toolTable>td.bold").removeClass("bold");
-        if ($(clickedElement)[0] != $(boldElement)[0]) {
-            $(clickedElement).addClass("bold");
-        }
+        $(this).find("i").text(function(i, text) {
+            return text === "add" ? "clear" : "add";
+        });
     });
 });
+
+Array.prototype.remove = function() {
+    var what, a = arguments,
+        L = a.length,
+        ax;
+    while (L && this.length) {
+        what = a[--L];
+        while ((ax = this.indexOf(what)) !== -1) {
+            this.splice(ax, 1);
+        }
+    }
+    return this;
+};

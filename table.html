@@ -56,6 +56,7 @@
         }
     </script>
     <link rel="stylesheet" href="customcss.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" id="tribe-common-skeleton-style-css" href="https://www.digitallernen.ch/wp-content/plugins/the-events-calendar/common/src/resources/css/common-skeleton.min.css?ver=4.12.4" type="text/css" media="all" />
     <link rel="stylesheet" id="tribe-tooltip-css" href="https://www.digitallernen.ch/wp-content/plugins/the-events-calendar/common/src/resources/css/tooltip.min.css?ver=4.12.4" type="text/css" media="all" />
     <link rel="stylesheet" id="wp-block-library-css" href="https://www.digitallernen.ch/wp-content/plugins/gutenberg/build/block-library/style.css?ver=1566892108" type="text/css" media="all" />
@@ -421,19 +422,22 @@
                                     verwendet. Aus der didaktischen Konzeption, die eine begründete Auswahl von Lehr-/Lernsettings bestimmt, gehen die benötigten Zugänge zu Lernrescourcen wie Moodle oder SWITCH Diesnte, hervor, die entsprechd eingerichtet
                                     werden müssen.</p>
 
-                                <input type="text" v-model="search" class="form-control" placeholder="Suche" />
-                                <br>
+                                <p>
+                                    <strong>Geben Sie den Namen eines Tools ein um Ihn in der Tabelle zu suchen:</strong>
+                                    <input type="text" v-model="search" class="form-control" placeholder="Suche" />
+                                </p>
                                 <div class="overflowScrollX">
+                                    <strong>Hinweis:</strong> Klicken Sie auf einen der Lehr-/Lernszenarien oder Medienpädagogische Ansätze um die Tabelle danach zu filtern.
                                     <table class="table table-bordered">
                                         <tbody>
-                                            <tr class="borderBottomSeperate">
-                                                <td class="borderRightSeperate"><span class="spaceSpan"></span></td>
-                                                <td class="strongText borderRightSeperate" colspan="12">Lehr-/Lernszenarien</td>
-                                                <td class="strongText borderRightSeperate" colspan="6">Medienpädagogische Ansätze</td>
+                                            <tr class="borderBottomSeperate backgroundWhite">
+                                                <td class="borderRightSeperate notSelectDown"><span class="spaceSpan"></span></td>
+                                                <td class="strongText borderRightSeperate notSelectDown" colspan="12">Lehr-/Lernszenarien</td>
+                                                <td class="strongText borderRightSeperate notSelectDown" colspan="6">Medienpädagogische Ansätze</td>
                                                 <td colspan="2">&nbsp;</td>
                                             </tr>
                                             <tr class="rotate90 borderBottomSeperate toolTable">
-                                                <td class="strongText borderRightSeperate" v-on:click="sortBy('name')" rowspan="2">
+                                                <td class="strongText borderRightSeperate notSelectDown" v-on:click="sortBy('name')" rowspan="2">
                                                     Tool/Service
                                                     <!-- Arrow Right -->
                                                     <svg v-if="sortKey == 1" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -454,27 +458,27 @@
                                                     </svg>
 
                                                 </td>
-                                                <td v-on:click="filterBy('0')" rowspan="2"><span>Kommunikation</span>
-                                                </td>
-                                                <td v-on:click="filterBy('1')" rowspan="2"><span>Kommunikation synchron [1]</span></td>
-                                                <td v-on:click="filterBy('2')" rowspan="2"><span>Kommunikation asynchron</span></td>
-                                                <td v-on:click="filterBy('3')" rowspan="2"><span>Kollaboration</span></td>
-                                                <td v-on:click="filterBy('4')" rowspan="2"><span>Überprüfung</span></td>
-                                                <td v-on:click="filterBy('5')" rowspan="2"><span>formativ</span></td>
-                                                <td v-on:click="filterBy('6')" rowspan="2"><span>summativ</span></td>
-                                                <td v-on:click="filterBy('7')" rowspan="2"><span>Produkt</span></td>
-                                                <td v-on:click="filterBy('8')" rowspan="2"><span>Klausur</span></td>
-                                                <td v-on:click="filterBy('9')" rowspan="2"><span>Mündliche Prüfung</span></td>
-                                                <td v-on:click="filterBy('10')" rowspan="2"><span>Evaluation [3]</span></td>
-                                                <td v-on:click="filterBy('11')" rowspan="2" class="borderRightSeperate"><span>Selbstevaluation</span></td>
-                                                <td v-on:click="filterBy('12')" rowspan="2"><span>Angereicherte Präsenzlehre</span></td>
-                                                <td v-on:click="filterBy('13')" rowspan="2"><span class="block">Blended Learning <br><small>(Online und Offline-Phasen wechseln sich in sinnvoller Verknüpfung ab)</small></span></td>
-                                                <td v-on:click="filterBy('14')" rowspan="2"><span class="block">Hybrid Distance Learning <br><small> (in Kombination mit kleinen Präsenzgruppen)</small></span></td>
-                                                <td v-on:click="filterBy('15')" rowspan="2"><span class="block">Distance Learning<br><small>(webbasiert)</small></span></td>
-                                                <td v-on:click="filterBy('16')" rowspan="2"><span class="block">Distance Learnning <br><small>synchron</small></span></td>
-                                                <td v-on:click="filterBy('17')" rowspan="2" class="borderRightSeperate"><span class="block">Distance Learnning <br><small>asynchron</small></span></td>
-                                                <td rowspan="2"><span class="block">Informationen/Anleitungen</span></td>
-                                                <td rowspan="2"><span class="block">Beratungen/WB</span></td>
+                                                <td v-on:click="filterBy('0')" rowspan="2"><span><i class="material-icons md-18 iconRotate">add</i>
+                                                    Kommunikation</span></td>
+                                                <td v-on:click="filterBy('1')" rowspan="2"><span><i class="material-icons md-18 iconRotate">add</i>Kommunikation synchron [1]</span></td>
+                                                <td v-on:click="filterBy('2')" rowspan="2"><span><i class="material-icons md-18 iconRotate">add</i>Kommunikation asynchron</span></td>
+                                                <td v-on:click="filterBy('3')" rowspan="2"><span><i class="material-icons md-18 iconRotate">add</i>Kollaboration</span></td>
+                                                <td v-on:click="filterBy('4')" rowspan="2"><span><i class="material-icons md-18 iconRotate">add</i>Überprüfung</span></td>
+                                                <td v-on:click="filterBy('5')" rowspan="2"><span><i class="material-icons md-18 iconRotate">add</i>formativ</span></td>
+                                                <td v-on:click="filterBy('6')" rowspan="2"><span><i class="material-icons md-18 iconRotate">add</i>summativ</span></td>
+                                                <td v-on:click="filterBy('7')" rowspan="2"><span><i class="material-icons md-18 iconRotate">add</i>Produkt</span></td>
+                                                <td v-on:click="filterBy('8')" rowspan="2"><span><i class="material-icons md-18 iconRotate">add</i>Klausur</span></td>
+                                                <td v-on:click="filterBy('9')" rowspan="2"><span><i class="material-icons md-18 iconRotate">add</i>Mündliche Prüfung</span></td>
+                                                <td v-on:click="filterBy('10')" rowspan="2"><span><i class="material-icons md-18 iconRotate">add</i>Evaluation [3]</span></td>
+                                                <td v-on:click="filterBy('11')" rowspan="2" class="borderRightSeperate"><span><i class="material-icons md-18 iconRotate">add</i>Selbstevaluation</span></td>
+                                                <td v-on:click="filterBy('12')" rowspan="2"><span><i class="material-icons md-18 iconRotate">add</i>Angereicherte Präsenzlehre</span></td>
+                                                <td v-on:click="filterBy('13')" rowspan="2"><span class="block"><i class="material-icons md-18 iconRotate">add</i>Blended Learning <br><small>(Online und Offline-Phasen wechseln sich in sinnvoller Verknüpfung ab)</small></span></td>
+                                                <td v-on:click="filterBy('14')" rowspan="2"><span class="block"><i class="material-icons md-18 iconRotate">add</i>Hybrid Distance Learning <br><small> (in Kombination mit kleinen Präsenzgruppen)</small></span></td>
+                                                <td v-on:click="filterBy('15')" rowspan="2"><span class="block"><i class="material-icons md-18 iconRotate">add</i>Distance Learning<br><small>(webbasiert)</small></span></td>
+                                                <td v-on:click="filterBy('16')" rowspan="2"><span class="block"><i class="material-icons md-18 iconRotate">add</i>Distance Learnning <br><small>synchron</small></span></td>
+                                                <td v-on:click="filterBy('17')" rowspan="2" class="borderRightSeperate"><span class="block"><i class="material-icons md-18 iconRotate">add</i>Distance Learnning <br><small>asynchron</small></span></td>
+                                                <td rowspan="2"><span class="block"><i class="material-icons md-18 iconRotate">add</i>Informationen/Anleitungen</span></td>
+                                                <td rowspan="2"><span class="block"><i class="material-icons md-18 iconRotate">add</i>Beratungen/WB</span></td>
                                             </tr>
                                             <tr></tr>
                                             <tr v-for="tool in filteredTools" class="tr-striped tableContent">
