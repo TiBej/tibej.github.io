@@ -68,7 +68,7 @@ th {
     position: relative !important;
 }
 
-tr>td:not(.tableContentLeftImp):not(.notSelectDown):hover:after {
+tr:not(.toolTable)>td:not(.tableContentLeftImp):not(.notSelectDown):hover::after {
     content: "";
     position: absolute;
     background-color: lightyellow;
@@ -79,7 +79,7 @@ tr>td:not(.tableContentLeftImp):not(.notSelectDown):hover:after {
     z-index: -1;
 }
 
-tr:not(.borderBottomSeperate)>td:hover::before {
+tr:not(.borderBottomSeperate)>td:not(.noHover):hover::before {
     content: "";
     position: absolute;
     background-color: lightyellow;
@@ -105,7 +105,7 @@ tr:not(.borderBottomSeperate)>td:hover::before {
 }
 
 td.hightlight {
-    color: red;
+    color: #FFA500;
 }
 
 .spaceSpan {
