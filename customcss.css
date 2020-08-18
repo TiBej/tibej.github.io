@@ -120,8 +120,3 @@ td.hightlight {
 .iconRotate {
     transform: rotate(90deg);
 }
-
-small {
-    padding-top: 26px;
-    display: block;
-}
