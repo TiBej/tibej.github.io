@@ -23,7 +23,7 @@ table {
     vertical-align: bottom !important;
     padding-left: 10px;
     padding-right: 10px;
-    height: 260px;
+    /*height: 260px;*/
 }
 
 div.overflowScrollX {
@@ -32,6 +32,26 @@ div.overflowScrollX {
 
 .toolTable>td>span {
     height: 260px;
+}
+
+.toolTable>td.w44 {
+    min-width: 44px;
+}
+
+.toolTable>td.w97 {
+    min-width: 97px;
+}
+
+.toolTable>td.w70 {
+    min-width: 70px;
+}
+
+.toolTable>td.w58 {
+    min-width: 58px;
+}
+
+.toolTable>td.w144 {
+    min-width: 144px;
 }
 
 .tr-striped:nth-of-type(odd) {
@@ -97,10 +117,15 @@ tr:not(.borderBottomSeperate)>td:not(.noHover):hover::before {
 
 .toolTable>td:hover,
 .toolTable>td>span:hover {
-    font-weight: bold
+    font-weight: bold;
+}
+
+.toolTable>td>span {
+    display: block;
 }
 
 .toolTable>td:not(.notSelectDown) {
+    padding: .5rem;
     padding-bottom: 0px;
 }
 
