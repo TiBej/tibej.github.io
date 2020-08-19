@@ -55,8 +55,7 @@
             }]
         }
     </script>
-    <link rel="stylesheet" href="customcss.css" type="text/css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
     <link rel="stylesheet" id="tribe-common-skeleton-style-css" href="https://www.digitallernen.ch/wp-content/plugins/the-events-calendar/common/src/resources/css/common-skeleton.min.css?ver=4.12.4" type="text/css" media="all" />
     <link rel="stylesheet" id="tribe-tooltip-css" href="https://www.digitallernen.ch/wp-content/plugins/the-events-calendar/common/src/resources/css/tooltip.min.css?ver=4.12.4" type="text/css" media="all" />
     <link rel="stylesheet" id="wp-block-library-css" href="https://www.digitallernen.ch/wp-content/plugins/gutenberg/build/block-library/style.css?ver=1566892108" type="text/css" media="all" />
@@ -118,10 +117,9 @@
     </style>
 
     <!-- *********************************************************************************-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="tablecss.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- *********************************************************************************-->
-
 </head>
 
 <body class="page-template-default page page-id-195 page-parent page-child parent-pageid-46 tribe-no-js tribe-events-page-template no-js">
@@ -390,151 +388,148 @@
             </nav>
             <div class="content-wrapper">
 
-                <body>
-                    <div class="container">
-                        <div class="wp-block-wk-bildbalken bildbalken alignwide">
-                            <div class="bildbalken-wrapper">
-                                <div class="bildbalken__image-wrapper">
-                                    <picture>
-                                        <source srcset="
+                <div class="container">
+                    <div class="wp-block-wk-bildbalken bildbalken alignwide">
+                        <div class="bildbalken-wrapper">
+                            <div class="bildbalken__image-wrapper">
+                                <picture>
+                                    <source srcset="
                                                     https://www.digitallernen.ch/wp-content/uploads/Banner-Methoden-1-1024x227.webp 1024w,
                                                     https://www.digitallernen.ch/wp-content/uploads/Banner-Methoden-1-768x171.webp   768w,
                                                     https://www.digitallernen.ch/wp-content/uploads/Banner-Methoden-1-360x80.webp    360w
                                                 " type="image/webp" />
-                                        <img src="https://www.digitallernen.ch/wp-content/uploads/Banner-Methoden-1.jpg" srcset="
+                                    <img src="https://www.digitallernen.ch/wp-content/uploads/Banner-Methoden-1.jpg" srcset="
                                                     https://www.digitallernen.ch/wp-content/uploads/Banner-Methoden-1-1024x227.jpg 1024w,
                                                     https://www.digitallernen.ch/wp-content/uploads/Banner-Methoden-1-768x171.jpg   768w,
                                                     https://www.digitallernen.ch/wp-content/uploads/Banner-Methoden-1-360x80.jpg    360w
                                                 " alt="" />
-                                    </picture>
-                                </div>
+                                </picture>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- ******************************************************************* -->
-                    <div id="app" class="container">
-                        <div class="wp-block-group alignwide">
-                            <div class="wp-block-group__inner-container">
-                                <h1 id="forschen" class="wp-block-wk-page-title">FHNW Tools für die Lehre</h1>
+                <!-- ******************************************************************* -->
+                <div id="app" class="container">
+                    <div class="wp-block-group alignwide">
+                        <div class="wp-block-group__inner-container">
+                            <h1 id="forschen" class="wp-block-wk-page-title">FHNW Tools für die Lehre</h1>
 
-                                <p>Diese Übersicht beschreibt Szenarien, die in der Hochschullehre tätige Personen selbst durchfühen und erstellen können. Zur Planung und zur Vorbereitung einer Lehrveranstaltung wird das elektronische Vorlesungsverzeichnis
-                                    verwendet. Aus der didaktischen Konzeption, die eine begründete Auswahl von Lehr-/Lernsettings bestimmt, gehen die benötigten Zugänge zu Lernrescourcen wie Moodle oder SWITCH Dienste, hervor, die entsprechend eingerichtet
-                                    werden müssen.</p>
-                                <p>Klicken Sie <a href="https://www.digitallernen.ch/wp-content/uploads/200810_Tools%C3%9Cbersicht.pdf" download>hier</a>, um die komplette Tabelle als PDF herunter zu laden.</p>
-                                <p>
-                                    <strong>Geben Sie den Namen eines Tools ein um Ihn in der Tabelle zu suchen:</strong>
-                                    <input type="text" v-model="search" class="form-control" placeholder="Suche" />
-                                </p>
-                                <div class="overflowScrollX">
-                                    <strong>Hinweis:</strong> Klicken Sie auf einen der Lehr-/Lernszenarien oder Medienpädagogische Ansätze um die Tabelle danach zu filtern.
-                                    <table class="table table-bordered">
-                                        <tbody>
-                                            <tr class="borderBottomSeperate backgroundWhite">
-                                                <td class="borderRightSeperate notSelectDown"><span class="spaceSpan"></span></td>
-                                                <td class="strongText borderRightSeperate notSelectDown" colspan="12">Lehr-/Lernszenarien</td>
-                                                <td class="strongText borderRightSeperate notSelectDown" colspan="6">Medienpädagogische Ansätze</td>
-                                                <td colspan="2">&nbsp;</td>
-                                            </tr>
-                                            <tr class="rotate90 borderBottomSeperate toolTable">
-                                                <td class="strongText borderRightSeperate notSelectDown" v-on:click="sortBy('name')" rowspan="2">
-                                                    Tool/Service
-                                                    <!-- Arrow Right -->
-                                                    <svg v-if="sortKey == 1" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <p>Diese Übersicht beschreibt Szenarien, die in der Hochschullehre tätige Personen selbst durchfühen und erstellen können. Zur Planung und zur Vorbereitung einer Lehrveranstaltung wird das elektronische Vorlesungsverzeichnis verwendet.
+                                Aus der didaktischen Konzeption, die eine begründete Auswahl von Lehr-/Lernsettings bestimmt, gehen die benötigten Zugänge zu Lernrescourcen wie Moodle oder SWITCH Dienste, hervor, die entsprechend eingerichtet werden müssen.</p>
+                            <p>Klicken Sie <a href="https://www.digitallernen.ch/wp-content/uploads/200810_Tools%C3%9Cbersicht.pdf" target="_blank" download>hier</a>, um die komplette Tabelle als PDF herunter zu laden.</p>
+                            <p>
+                                <strong>Geben Sie den Namen eines Tools ein um Ihn in der Tabelle zu suchen:</strong>
+                                <input type="text" v-model="search" class="form-control" placeholder="Suche" />
+                            </p>
+                            <div class="overflowScrollX">
+                                <strong>Hinweis:</strong> Klicken Sie auf einen der Lehr-/Lernszenarien oder Medienpädagogische Ansätze um die Tabelle danach zu filtern.
+                                <table class="table table-bordered">
+                                    <tbody>
+                                        <tr class="borderBottomSeperate backgroundWhite">
+                                            <td class="borderRightSeperate notSelectDown"><span class="spaceSpan"></span></td>
+                                            <td class="strongText borderRightSeperate notSelectDown" colspan="12">Lehr-/Lernszenarien</td>
+                                            <td class="strongText borderRightSeperate notSelectDown" colspan="6">Medienpädagogische Ansätze</td>
+                                            <td colspan="2">&nbsp;</td>
+                                        </tr>
+                                        <tr class="rotate90 borderBottomSeperate toolTable">
+                                            <td class="strongText borderRightSeperate notSelectDown" v-on:click="sortBy('name')" rowspan="2">
+                                                Tool/Service
+                                                <!-- Arrow Right -->
+                                                <svg v-if="sortKey == 1" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                         <path fill-rule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
                                                         <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/>
                                                     </svg>
 
-                                                    <!-- Arrow Down -->
-                                                    <svg v-if="sortKey == 2" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <!-- Arrow Down -->
+                                                <svg v-if="sortKey == 2" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                        <path fill-rule="evenodd" d="M4.646 9.646a.5.5 0 0 1 .708 0L8 12.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
                                                        <path fill-rule="evenodd" d="M8 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z"/>
                                                     </svg>
 
-                                                    <!-- Arrow Up -->
-                                                    <svg v-if="sortKey == 3" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                                <!-- Arrow Up -->
+                                                <svg v-if="sortKey == 3" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                                       <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/>
                                                       <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8 3.707 5.354 6.354a.5.5 0 1 1-.708-.708l3-3z"/>
                                                     </svg>
 
-                                                </td>
-                                                <td v-on:click="filterBy('0')" class="w44" rowspan="2"><span>
+                                            </td>
+                                            <td v-on:click="filterBy('0')" class="w44" rowspan="2"><span>
                                                     Kommunikation</span>
-                                                    <i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('1')" rowspan="2" class="w44"><span>Kommunikation synchron [1]</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('2')" rowspan="2" class="w44"><span>Kommunikation asynchron</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('3')" rowspan="2" class="w44"><span>Kollaboration</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('4')" rowspan="2" class="w44"><span>Überprüfung</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('5')" rowspan="2" class="w44"><span>formativ</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('6')" rowspan="2" class="w44"><span>summativ</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('7')" rowspan="2" class="w44"><span>Produkt</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('8')" rowspan="2" class="w44"><span>Klausur</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('9')" rowspan="2" class="w44"><span>Mündliche Prüfung</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('10')" rowspan="2" class="w44"><span>Evaluation [3]</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('11')" rowspan="2" class="borderRightSeperate w44"><span>Selbstevaluation</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('12')" rowspan="2" class="w44"> <span>Angereicherte Präsenzlehre</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('13')" rowspan="2" class="w97"><span>Blended Learning <br><small>(Online und Offline-Phasen wechseln sich in sinnvoller Verknüpfung ab)</small></span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('14')" rowspan="2" class="w97"><span>Hybrid Distance Learning <br><small> (in Kombination mit kleinen Präsenzgruppen)</small></span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('15')" rowspan="2" class="w70"><span>Distance Learning<br><small>(webbasiert)</small></span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('16')" rowspan="2" class="w70"><span>Distance Learnning <br><small>synchron</small></span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td v-on:click="filterBy('17')" rowspan="2" class="borderRightSeperate w70"><span>Distance Learnning <br><small>asynchron</small></span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td rowspan="2" class="pr-100 w144"><span>Informationen/Anleitungen</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                                <td rowspan="2" class="w58"><span>Beratungen/WB</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                            </tr>
-                                            <tr></tr>
-                                            <tr v-for="tool in filteredTools" class="tr-striped tableContent">
-                                                <td class="tableContentLeftImp borderRightSeperate noHover">{{ tool.name }}</td>
-                                                <td>{{ hasScenario(tool, 0) }}</td>
-                                                <td>{{ hasScenario(tool, 1) }}</td>
-                                                <td>{{ hasScenario(tool, 2) }}</td>
-                                                <td>{{ hasScenario(tool, 3) }}</td>
-                                                <td>{{ hasScenario(tool, 4) }}</td>
-                                                <td>{{ hasScenario(tool, 5) }}</td>
-                                                <td>{{ hasScenario(tool, 6) }}</td>
-                                                <td>{{ hasScenario(tool, 7) }}</td>
-                                                <td>{{ hasScenario(tool, 8) }}</td>
-                                                <td>{{ hasScenario(tool, 9) }}</td>
-                                                <td>{{ hasScenario(tool, 10) }}</td>
-                                                <td class="borderRightSeperate">{{ hasScenario(tool, 11) }}</td>
-                                                <td>{{ hasScenario(tool, 12) }}</td>
-                                                <td>{{ hasScenario(tool, 13) }}</td>
-                                                <td>{{ hasScenario(tool, 14) }}</td>
-                                                <td>{{ hasScenario(tool, 15) }}</td>
-                                                <td>{{ hasScenario(tool, 16) }}</td>
-                                                <td class="borderRightSeperate">{{ hasScenario(tool, 17) }}</td>
-                                                <td class="tableContentLeftImp whiteSpaceNoWrap">
-                                                    <span v-html="tool.instructionLink"></span>
-                                                </td>
-                                                <td class="tableContentLeftImp">
-                                                    <span v-html="tool.helpLink"></span>
-                                                </td>
-                                            </tr>
-                                            <tbody>
-                                    </table>
-                                </div>
-                                <p>
-                                    [1] Teammeetings, Sprechstunden, Webinare, Gruppentreffen etc. Überdies finden Sie hier spezifische Hinweise zu den Videokonferenztools und zur Online-Moderation.
-                                    <br>
-                                    <a href="https://www.digitallernen.ch/wp-content/uploads/anleitung-learning-management-tool-moodle.pdf">[2] Auswahl einiger Moodle-Aktivitäten – weitere Aktivitäten siehe Anleitung (LINK)</a>
-                                    <br> [3] Neben den hier dargestellten Möglichkeiten der Selbstevaluation, führt die PH FHNW in definierten Abständen eine obligatorische Evaluation von Lehrveranstaltungen durch. Innerhalb dieses institutionalisierten
-                                    Prozesses gibt es weitere Möglichkeiten der freiwilligen Evaluation, sowie der Selbstevaluation.
-                                    <br> [4] Zoom und MS Teams sind Tools, die aktuell von der CIT zur Verfügung gestellt werden, aber nicht als Service der FHNW unterstützt werden.
-                                </p>
-                                <p>Generelle Anmerkung: Diese Toolsübersicht erhebt keinen Anspruch auf Vollständigkeit, sondern bezieht sich auf Tools, die aus Sicht der Fachstelle Digitales Lehren und Lernen innerhalb der PH FHNW besonders relevant sind.
-                                    Aktuell überarbeitet die PH FHNW und die IT der FHNW den Softwarebeschaffungsprozesses für Mitarbeitende, auf welchen hier verwiesen wird, sobald dieser verfügbar ist.</p>
-                                <!-- ******************************************************************* -->
+                                                <i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('1')" rowspan="2" class="w44"><span>Kommunikation synchron [1]</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('2')" rowspan="2" class="w44"><span>Kommunikation asynchron</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('3')" rowspan="2" class="w44"><span>Kollaboration</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('4')" rowspan="2" class="w44"><span>Überprüfung</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('5')" rowspan="2" class="w44"><span>formativ</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('6')" rowspan="2" class="w44"><span>summativ</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('7')" rowspan="2" class="w44"><span>Produkt</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('8')" rowspan="2" class="w44"><span>Klausur</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('9')" rowspan="2" class="w44"><span>Mündliche Prüfung</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('10')" rowspan="2" class="w44"><span>Evaluation [3]</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('11')" rowspan="2" class="borderRightSeperate w44"><span>Selbstevaluation</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('12')" rowspan="2" class="w44"> <span>Angereicherte Präsenzlehre</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('13')" rowspan="2" class="w97"><span>Blended Learning <br><small>(Online und Offline-Phasen wechseln sich in sinnvoller Verknüpfung ab)</small></span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('14')" rowspan="2" class="w97"><span>Hybrid Distance Learning <br><small> (in Kombination mit kleinen Präsenzgruppen)</small></span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('15')" rowspan="2" class="w70"><span>Distance Learning<br><small>(webbasiert)</small></span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('16')" rowspan="2" class="w70"><span>Distance Learnning <br><small>synchron</small></span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td v-on:click="filterBy('17')" rowspan="2" class="borderRightSeperate w70"><span>Distance Learnning <br><small>asynchron</small></span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td rowspan="2" class="pr-100 w144"><span>Informationen/Anleitungen</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                            <td rowspan="2" class="w58"><span>Beratungen/WB</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                        </tr>
+                                        <tr></tr>
+                                        <tr v-for="tool in filteredTools" class="tr-striped tableContent">
+                                            <td class="tableContentLeftImp borderRightSeperate noHover">{{ tool.name }}</td>
+                                            <td>{{ hasScenario(tool, 0) }}</td>
+                                            <td>{{ hasScenario(tool, 1) }}</td>
+                                            <td>{{ hasScenario(tool, 2) }}</td>
+                                            <td>{{ hasScenario(tool, 3) }}</td>
+                                            <td>{{ hasScenario(tool, 4) }}</td>
+                                            <td>{{ hasScenario(tool, 5) }}</td>
+                                            <td>{{ hasScenario(tool, 6) }}</td>
+                                            <td>{{ hasScenario(tool, 7) }}</td>
+                                            <td>{{ hasScenario(tool, 8) }}</td>
+                                            <td>{{ hasScenario(tool, 9) }}</td>
+                                            <td>{{ hasScenario(tool, 10) }}</td>
+                                            <td class="borderRightSeperate">{{ hasScenario(tool, 11) }}</td>
+                                            <td>{{ hasScenario(tool, 12) }}</td>
+                                            <td>{{ hasScenario(tool, 13) }}</td>
+                                            <td>{{ hasScenario(tool, 14) }}</td>
+                                            <td>{{ hasScenario(tool, 15) }}</td>
+                                            <td>{{ hasScenario(tool, 16) }}</td>
+                                            <td class="borderRightSeperate">{{ hasScenario(tool, 17) }}</td>
+                                            <td class="tableContentLeftImp whiteSpaceNoWrap">
+                                                <span v-html="tool.instructionLink"></span>
+                                            </td>
+                                            <td class="tableContentLeftImp">
+                                                <span v-html="tool.helpLink"></span>
+                                            </td>
+                                        </tr>
+                                        <tbody>
+                                </table>
                             </div>
+                            <p>
+                                [1] Teammeetings, Sprechstunden, Webinare, Gruppentreffen etc. Überdies finden Sie hier spezifische Hinweise zu den Videokonferenztools und zur Online-Moderation.
+                                <br>
+                                <a href="https://www.digitallernen.ch/wp-content/uploads/anleitung-learning-management-tool-moodle.pdf">[2] Auswahl einiger Moodle-Aktivitäten – weitere Aktivitäten siehe Anleitung (LINK)</a>
+                                <br> [3] Neben den hier dargestellten Möglichkeiten der Selbstevaluation, führt die PH FHNW in definierten Abständen eine obligatorische Evaluation von Lehrveranstaltungen durch. Innerhalb dieses institutionalisierten Prozesses
+                                gibt es weitere Möglichkeiten der freiwilligen Evaluation, sowie der Selbstevaluation.
+                                <br> [4] Zoom und MS Teams sind Tools, die aktuell von der CIT zur Verfügung gestellt werden, aber nicht als Service der FHNW unterstützt werden.
+                            </p>
+                            <p>Generelle Anmerkung: Diese Toolsübersicht erhebt keinen Anspruch auf Vollständigkeit, sondern bezieht sich auf Tools, die aus Sicht der Fachstelle Digitales Lehren und Lernen innerhalb der PH FHNW besonders relevant sind. Aktuell
+                                überarbeitet die PH FHNW und die IT der FHNW den Softwarebeschaffungsprozesses für Mitarbeitende, auf welchen hier verwiesen wird, sobald dieser verfügbar ist.</p>
+                            <!-- ******************************************************************* -->
                         </div>
                     </div>
+                </div>
 
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12 col-lg-10 col-xl-8">
-                                <p></p>
-                            </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-lg-10 col-xl-8">
+                            <p></p>
                         </div>
                     </div>
-                </body>
+                </div>
 
                 <div class="container">
                     <div class="row">
@@ -702,6 +697,8 @@
         /* ]]> */
     </script>
     <script type="text/javascript" src="https://www.digitallernen.ch/wp-content/themes/fhnw/fhnw/assets/dist/scripts/functions_fb83a692f794122db981.min.js?ver=5.2.7"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="tablejs.js"></script>
 </body>
 
