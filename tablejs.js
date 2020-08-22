@@ -21,8 +21,8 @@ const jsonToolList = `
               16,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
            "name":"Moodle Wiki",
@@ -37,8 +37,8 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
            "name":"Moodle Test",
@@ -54,8 +54,8 @@ const jsonToolList = `
               15,
               16
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
            "name":"Moodle EtherPad & EtherCalc",
@@ -71,8 +71,8 @@ const jsonToolList = `
               16,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
            "name":"Moodle Aufgabe ",
@@ -88,8 +88,8 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
            "name":"Moodle Forum",
@@ -105,8 +105,8 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
            "name":"Moodle Studierenden-Ordner",
@@ -123,8 +123,8 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
            "name":"Moodle Glossar",
@@ -139,8 +139,8 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
            "name":"Moodle Feedback/Befragung",
@@ -149,11 +149,11 @@ const jsonToolList = `
               11,
               13
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/moodle/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
-           "name":"Digitaler Semesterapparat",
+           "name":"<a href='https://www.fhnw.ch/de/die-fhnw/bibliotheken/bibliothek-olten/aktuelles/anlegen_digisem_anleitungdozierende-1.pdf' target='_blank' download>Digitaler Semesterapparat</a>",
            "scenario":[
               12,
               13,
@@ -161,8 +161,8 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/forschung/projekte/digitaler-semesterapparat-in-moodle/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/forschung/projekte/digitaler-semesterapparat-in-moodle/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
            "name":"Turnitin",
@@ -175,8 +175,8 @@ const jsonToolList = `
               16,
               17
            ],
-           "instructionLink":"<a href=\'https://www.fhnw.ch/plattformen/plagiat/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.fhnw.ch/plattformen/plagiat/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
            "name":"SWITCH Dienste",
@@ -198,11 +198,11 @@ const jsonToolList = `
               16,
               17
            ],
-           "instructionLink":"<a href=\'\'></a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'\' target='_blank'></a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
-           "name":"SWITCHportfolio",
+           "name":"<a href='https://www.digitallernen.ch/e-portfolios/' target='_blank'>SWITCHportfolio</a>",
            "scenario":[
               0,
               2,
@@ -215,11 +215,11 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/e-portfolio/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/e-portfolio/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
-           "name":"SWITCHfilesender",
+           "name":"<a href='https://www.switch.ch/de/services/filesender/' target='_blank'>SWITCHfilesender</a>",
            "scenario":[
               6,
               7,
@@ -229,11 +229,11 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/methoden/organisieren/dateien-versenden/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/methoden/organisieren/dateien-versenden/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
-           "name":"SWITCHdrive",
+           "name":"<a href='https://www.switch.ch/de/services/drive/' target='_blank'>SWITCHdrive</a>",
            "scenario":[
               3,
               6,
@@ -245,11 +245,11 @@ const jsonToolList = `
               16,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/methoden/organisieren/dateiablage-mit-switchdrive/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/methoden/organisieren/dateiablage-mit-switchdrive/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
-           "name":"SWITCHtube",
+           "name":"<a href='https://www.switch.ch/tube/' target='_blank'>SWITCHtube</a>",
            "scenario":[
               4,
               6,
@@ -260,11 +260,11 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/video/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/video/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
-           "name":"SWITCHcast und annotate",
+           "name":"<a href='https://www.switch.ch/cast/' target='_blank'>SWITCHcast und annotate</a>",
            "scenario":[
               10,
               11,
@@ -273,11 +273,11 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/video/#video-auf-switchtube-bereitstellen\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/themen/video/#video-auf-switchtube-bereitstellen\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
-           "name":"SWITCHinteract",
+           "name":"<a href='https://www.switch.ch/interact/' target='_blank'>SWITCHinteract</a>",
            "scenario":[
               0,
               1,
@@ -288,11 +288,11 @@ const jsonToolList = `
               15,
               16
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/methoden/kommunizieren/#switchinteract\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'>FDL</a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/methoden/kommunizieren/#switchinteract\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
-           "name":"Jitsi (SWITCH Open Meet)",
+           "name":"<a href='https://open.meet.switch.ch/' target='_blank'>Jitsi (SWITCH Open Meet)</a>",
            "scenario":[
               0,
               1,
@@ -304,8 +304,8 @@ const jsonToolList = `
               15,
               16
            ],
-           "instructionLink":"<a href=\'\'></a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'></a>"
+           "instructionLink":"<a href=\'\' target='_blank'></a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'></a>"
         },
         {
            "name":"Zoom [4]",
@@ -320,11 +320,11 @@ const jsonToolList = `
               15,
               16
            ],
-           "instructionLink":"<a href=\'https://welcome.inside.fhnw.ch/hsle2025/Seiten/Zoom.aspx\'>Plattform Lehre</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'></a>"
+           "instructionLink":"<a href=\'https://welcome.inside.fhnw.ch/hsle2025/Seiten/Zoom.aspx\' target='_blank'>Plattform Lehre</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'></a>"
         },
         {
-           "name":"Webex",
+           "name":"<a href='https://groups.inside.fhnw.ch/workspace_sites/HSLEDemo/Pages/WebEx.aspx' target='_blank'>Webex</a>",
            "scenario":[
               0,
               1,
@@ -336,11 +336,11 @@ const jsonToolList = `
               15,
               16
            ],
-           "instructionLink":"<a href=\'https://welcome.inside.fhnw.ch/organisation/hochschule/services/cit/seiten/videokonferenz.aspx\'>CIT</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'></a>"
+           "instructionLink":"<a href=\'https://welcome.inside.fhnw.ch/organisation/hochschule/services/cit/seiten/videokonferenz.aspx\' target='_blank'>CIT</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'></a>"
         },
         {
-           "name":"Jabber",
+           "name":"<a href='https://welcome.inside.fhnw.ch/toolsandservices/SitePages/MyPhone.aspx%23manualsPhone' target='_blank'>Jabber</a>",
            "scenario":[
               0,
               1,
@@ -350,8 +350,8 @@ const jsonToolList = `
               15,
               16
            ],
-           "instructionLink":"<a href=\'https://welcome.inside.fhnw.ch/toolsandservices/SitePages/MyPhone.aspx#manualsPhone\'>CIT</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'></a>"
+           "instructionLink":"<a href=\'https://welcome.inside.fhnw.ch/toolsandservices/SitePages/MyPhone.aspx#manualsPhone\' target='_blank'>CIT</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'></a>"
         },
         {
            "name":"Groups Inside",
@@ -363,11 +363,11 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://groups.inside.fhnw.ch/workspace_sites/InsideHelp/SitePages/Home.aspx\'>CIT</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'></a>"
+           "instructionLink":"<a href=\'https://groups.inside.fhnw.ch/workspace_sites/InsideHelp/SitePages/Home.aspx\' target='_blank'>CIT</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'></a>"
         },
         {
-           "name":"Laufwerke FHNW",
+           "name":"<a href='https://www.digitallernen.ch/methoden/organisieren/dateiablage-mit-laufwerk-fhnw/' target='_blank'>Laufwerke FHNW</a>",
            "scenario":[
               3,
               12,
@@ -376,11 +376,11 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/methoden/organisieren/dateiablage-mit-laufwerk-fhnw/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'></a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/methoden/organisieren/dateiablage-mit-laufwerk-fhnw/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'></a>"
         },
         {
-           "name":"Literaturverwaltung (Citavi, Litlink, Zotero)",
+           "name":"<a href='https://www.digitallernen.ch/methoden/organisieren/literatur-verwalten/' target='_blank'>Literaturverwaltung (Citavi, Litlink, Zotero)</a>",
            "scenario":[
               3,
               12,
@@ -389,8 +389,8 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/methoden/organisieren/literatur-verwalten/\'>digitallernen.ch</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'></a>"
+           "instructionLink":"<a href=\'https://www.digitallernen.ch/methoden/organisieren/literatur-verwalten/\' target='_blank'>digitallernen.ch</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'></a>"
         },
         {
            "name":"MS Teams [4]",
@@ -406,8 +406,8 @@ const jsonToolList = `
               16,
               17
            ],
-           "instructionLink":"<a href=\'https://welcome.inside.fhnw.ch/hsle2025/Seiten/Microsoft-Teams.aspx\'>Plattform Lehre</a>",
-           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\'></a>"
+           "instructionLink":"<a href=\'https://welcome.inside.fhnw.ch/hsle2025/Seiten/Microsoft-Teams.aspx\' target='_blank'>Plattform Lehre</a>",
+           "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'></a>"
         }
      ]
 }
@@ -483,7 +483,7 @@ var app = new Vue({
 });
 
 $(document).ready(function() {
-    $(".toolTable>td:not(.notSelectDown)").click(function() {
+    $(".toolTable>th:not(.notSelectDown)").click(function() {
         $(this).toggleClass("hightlight");
 
         $(this).find("i").text(function(i, text) {

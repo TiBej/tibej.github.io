@@ -1,6 +1,14 @@
-.rotate90>td>span,
-.rotate90>td>small,
-.rotate90>td>a {
+.toolTable > th {
+    font-weight: 500;
+}
+
+.table thead th {
+    border: 2px solid #dee2e6;
+}
+
+.rotate90>th>span,
+.rotate90>th>small,
+.rotate90>th>a {
     -ms-writing-mode: tb-rl;
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
@@ -19,7 +27,7 @@ table {
     text-align: left !important;
 }
 
-.toolTable>td {
+.toolTable>th {
     vertical-align: bottom !important;
     padding-left: 10px;
     padding-right: 10px;
@@ -30,27 +38,27 @@ div.overflowScrollX {
     overflow-x: scroll;
 }
 
-.toolTable>td>span {
+.toolTable>th>span {
     height: 260px;
 }
 
-.toolTable>td.w44 {
+.toolTable>th.w44 {
     min-width: 44px;
 }
 
-.toolTable>td.w97 {
+.toolTable>th.w97 {
     min-width: 97px;
 }
 
-.toolTable>td.w70 {
+.toolTable>th.w70 {
     min-width: 70px;
 }
 
-.toolTable>td.w58 {
+.toolTable>th.w58 {
     min-width: 58px;
 }
 
-.toolTable>td.w144 {
+.toolTable>th.w144 {
     min-width: 144px;
 }
 
@@ -67,6 +75,7 @@ span.block {
     padding: 5px !important;
 }
 
+th.borderRightSeperate,
 td.borderRightSeperate {
     border-right-color: #6c757d !important;
 }
@@ -88,7 +97,7 @@ th {
     position: relative !important;
 }
 
-tr:not(.toolTable)>td:not(.tableContentLeftImp):not(.notSelectDown):hover::after {
+tr:not(.toolTable)>td:not(.noHover):not(.notSelectDown):hover::after {
     content: "";
     position: absolute;
     background-color: lightyellow;
@@ -110,26 +119,26 @@ tr:not(.borderBottomSeperate)>td:not(.noHover):hover::before {
     z-index: -1;
 }
 
-.toolTable>td {
+.toolTable>th {
     cursor: pointer;
     color: steelblue;
 }
 
-.toolTable>td:hover,
-.toolTable>td>span:hover {
+.toolTable>th:hover,
+.toolTable>th>span:hover {
     font-weight: bold;
 }
 
-.toolTable>td>span {
+.toolTable>th>span {
     display: block;
 }
 
-.toolTable>td:not(.notSelectDown) {
+.toolTable>th:not(.notSelectDown) {
     padding: .5rem;
     padding-bottom: 0px;
 }
 
-td.hightlight {
+th.hightlight {
     color: #FFA500;
 }
 
@@ -148,4 +157,8 @@ td.hightlight {
 
 .pr-100 {
     padding-right: 100px !important;
+}
+
+.link a {
+    color: steelblue !important;
 }
