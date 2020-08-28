@@ -423,15 +423,15 @@
                                 <strong>Geben Sie den Namen eines Tools ein um Ihn in der Tabelle zu suchen:</strong>
                                 <input type="text" v-model="search" class="form-control" placeholder="Suche" />
                             </p>
-                            <div class="overflowScrollX">
-                                <strong>Hinweis:</strong> Klicken Sie auf einen der Medienpädagogische Settings oder Lehr-/Lernszenarien um die Tabelle danach zu filtern.
-                                <table class="table table-bordered">
+                            <strong>Hinweis:</strong> Klicken Sie auf einen der Medienpädagogische Settings oder Lehr-/Lernszenarien um die Tabelle danach zu filtern.
+                            <div class="overflowScrollX trans180">
+                                <table class="table table-bordered trans180">
                                     <thead>
                                         <tr class="borderBottomSeperate backgroundWhite">
                                             <th class="borderRightSeperate notSelectDown"><span class="spaceSpan"></span></td>
-                                            <th class="strongText borderRightSeperate notSelectDown" colspan="12">Medienpädagogische Settings</td>
-                                            <th class="strongText borderRightSeperate notSelectDown" colspan="6">Lehr-/Lernszenarien</td>
-                                            <th colspan="2">&nbsp;</td>
+                                                <th class="strongText borderRightSeperate notSelectDown" colspan="12">Medienpädagogische Settings</td>
+                                                    <th class="strongText borderRightSeperate notSelectDown" colspan="6">Lehr-/Lernszenarien</td>
+                                                        <th colspan="2">&nbsp;</td>
                                         </tr>
                                         <tr class="rotate90 borderBottomSeperate toolTable">
                                             <th class="strongText borderRightSeperate notSelectDown" v-on:click="sortBy('name')" rowspan="2">
@@ -458,25 +458,25 @@
                                             <th v-on:click="filterBy('0')" class="w44" rowspan="2"><span>
                                                     Kommunikation</span>
                                                 <i class="material-icons md-18 iconRotate">add</i></td>
-                                            <th v-on:click="filterBy('1')" rowspan="2" class="w44"><span>Kommunikation synchron [1]</span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('2')" rowspan="2" class="w44"><span>Kommunikation asynchron</span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('3')" rowspan="2" class="w44"><span>Kollaboration</span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('4')" rowspan="2" class="w44"><span>Überprüfung</span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('5')" rowspan="2" class="w44"><span>formativ</span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('6')" rowspan="2" class="w44"><span>summativ</span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('7')" rowspan="2" class="w44"><span>Produkt</span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('8')" rowspan="2" class="w44"><span>Klausur</span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('9')" rowspan="2" class="w44"><span>Mündliche Prüfung</span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('10')" rowspan="2" class="w44"><span>Evaluation [3]</span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('11')" rowspan="2" class="borderRightSeperate w44"><span>Selbstevaluation</span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('12')" rowspan="2" class="w44"> <span>Angereicherte Präsenzlehre</span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('13')" rowspan="2" class="w97"><span>Blended Learning <br><small>(Online und Offline-Phasen wechseln sich in sinnvoller Verknüpfung ab)</small></span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('14')" rowspan="2" class="w97"><span>Hybrid Distance Learning <br><small> (in Kombination mit kleinen Präsenzgruppen)</small></span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('15')" rowspan="2" class="w70"><span>Distance Learning<br><small>(webbasiert)</small></span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th td v-on:click="filterBy('16')" rowspan="2" class="w70"><span>Distance Learning <br><small>synchron</small></span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th v-on:click="filterBy('17')" rowspan="2" class="borderRightSeperate w70"><span>Distance Learnning <br><small>asynchron</small></span><i class="material-icons md-18 iconRotate">add</i></th>
-                                            <th rowspan="2" class="pr-100 w144"><span>Informationen/Anleitungen</span><i class="material-icons md-18 iconRotate">add</i></td>
-                                            <th td rowspan="2" class="w58"><span>Beratungen/WB</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                                <th v-on:click="filterBy('1')" rowspan="2" class="w44"><span>Kommunikation synchron [1]</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('2')" rowspan="2" class="w44"><span>Kommunikation asynchron</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('3')" rowspan="2" class="w44"><span>Kollaboration</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('4')" rowspan="2" class="w44"><span>Überprüfung</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('5')" rowspan="2" class="w44"><span>formativ</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('6')" rowspan="2" class="w44"><span>summativ</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('7')" rowspan="2" class="w44"><span>Produkt</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('8')" rowspan="2" class="w44"><span>Klausur</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('9')" rowspan="2" class="w44"><span>Mündliche Prüfung</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('10')" rowspan="2" class="w44"><span>Evaluation [3]</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('11')" rowspan="2" class="borderRightSeperate w44"><span>Selbstevaluation</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('12')" rowspan="2" class="w44"> <span>Angereicherte Präsenzlehre</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('13')" rowspan="2" class="w97"><span>Blended Learning <br><small>(Online und Offline-Phasen wechseln sich in sinnvoller Verknüpfung ab)</small></span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('14')" rowspan="2" class="w97"><span>Hybrid Distance Learning <br><small> (in Kombination mit kleinen Präsenzgruppen)</small></span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('15')" rowspan="2" class="w70"><span>Distance Learning<br><small>(webbasiert)</small></span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th td v-on:click="filterBy('16')" rowspan="2" class="w70"><span>Distance Learning <br><small>synchron</small></span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th v-on:click="filterBy('17')" rowspan="2" class="borderRightSeperate w70"><span>Distance Learnning <br><small>asynchron</small></span><i class="material-icons md-18 iconRotate">add</i></th>
+                                                <th rowspan="2" class="pr-100 w144"><span>Informationen/Anleitungen</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                                    <th td rowspan="2" class="w58"><span>Beratungen/WB</span><i class="material-icons md-18 iconRotate">add</i></td>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -504,7 +504,7 @@
                                             <td class="tableContentLeftImp whiteSpaceNoWrap link" v-html="tool.instructionLink"></td>
                                             <td class="tableContentLeftImp link" v-html="tool.helpLink"></td>
                                         </tr>
-                                    <tbody>
+                                        <tbody>
                                 </table>
                             </div>
                             <p>

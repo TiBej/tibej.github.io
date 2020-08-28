@@ -1,0 +1,28 @@
+.interactiveTableIframe {
+	height: 3050px;
+	width: 100%;
+}
+
+@media (min-width: 576px) { 
+	.interactiveTableIframe {
+		height: 3000px !important;
+	}
+}
+
+@media (min-width: 768px) {
+	.interactiveTableIframe {
+		height: 2750px !important;
+	}
+}
+
+@media (min-width: 992px) {
+	.interactiveTableIframe {
+		height: 2650px !important;
+	}
+}
+
+@media (min-width: 1200px) {
+	.interactiveTableIframe {
+		height: 2520px !important;
+	}
+}
