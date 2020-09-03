@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tools - digitallernen</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
+    <!-- This site is optimized with the Yoast SEO plugin v11.7 - https://yoast.com/wordpress/plugins/seo/ -->
+    <link rel="canonical" href="https://www.digitallernen.ch/methoden/forschen/" />
+    <link rel="stylesheet" id="tribe-common-skeleton-style-css" href="https://www.digitallernen.ch/wp-content/plugins/the-events-calendar/common/src/resources/css/common-skeleton.min.css?ver=4.12.4" type="text/css" media="all" />
+    <link rel="stylesheet" id="tribe-tooltip-css" href="https://www.digitallernen.ch/wp-content/plugins/the-events-calendar/common/src/resources/css/tooltip.min.css?ver=4.12.4" type="text/css" media="all" />
+    <link rel="stylesheet" id="wp-block-library-css" href="https://www.digitallernen.ch/wp-content/plugins/gutenberg/build/block-library/style.css?ver=1566892108" type="text/css" media="all" />
+    <link rel="stylesheet" id="pb-accordion-blocks-style-css" href="https://www.digitallernen.ch/wp-content/plugins/accordion-blocks/build/index.css?ver=d495765eaff9a5bbb6e4ef01da77f336" type="text/css" media="all" />
+    <link rel="stylesheet" id="advgb_custom_styles-css" href="https://www.digitallernen.ch/wp-content/uploads/advgb/custom_styles.css?ver=5.2.7" type="text/css" media="all" />
+    <link rel="stylesheet" id="dashicons-css" href="https://www.digitallernen.ch/wp-includes/css/dashicons.min.css?ver=5.2.7" type="text/css" media="all" />
+    <link rel="stylesheet" id="fonts-css" href="https://fonts.googleapis.com/css?family=Raleway%3A300%2C400%2C600%2C500%2C700&#038;ver=1.2.2" type="text/css" media="all" />
+    <link rel="stylesheet" id="mapbox-gl-css-css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.1.1/mapbox-gl.css?ver=1.2.2" type="text/css" media="all" />
+    <link rel="stylesheet" id="theme-style-css" href="https://www.digitallernen.ch/wp-content/themes/fhnw/fhnw/assets/dist/styles/styles_a3599de11263b52e1018.min.css?ver=5.2.7" type="text/css" media="all" />
+    <script type="text/javascript" src="https://www.digitallernen.ch/wp-includes/js/jquery/jquery.js?ver=1.12.4-wp"></script>
+    <script type="text/javascript" src="https://www.digitallernen.ch/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1"></script>
+    <link rel="alternate" type="application/json+oembed" href="https://www.digitallernen.ch/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.digitallernen.ch%2Fmethoden%2Fforschen%2F" />
+    <link rel="alternate" type="text/xml+oembed" href="https://www.digitallernen.ch/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.digitallernen.ch%2Fmethoden%2Fforschen%2F&#038;format=xml" />
+    <meta name="tec-api-version" content="v1" />
+    <meta name="tec-api-origin" content="https://www.digitallernen.ch" />
+    <link rel="https://theeventscalendar.com/" href="https://www.digitallernen.ch/wp-json/tribe/events/v1/" />
+    <link rel="manifest" href="https://www.digitallernen.ch/wp-content/themes/fhnw/fhnw/manifest.json" />
+    <link rel="icon" href="https://www.digitallernen.ch/wp-content/uploads/favicon-150x150.png" sizes="32x32" />
+    <link rel="icon" href="https://www.digitallernen.ch/wp-content/uploads/favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="https://www.digitallernen.ch/wp-content/uploads/favicon.png" />
+    <meta name="msapplication-TileImage" content="https://www.digitallernen.ch/wp-content/uploads/favicon.png" />
+    <style type="text/css" id="wp-custom-css">
+        .sr-only {
+            border: 0 !important;
+            clip: rect(1px, 1px, 1px, 1px) !important;
+            -webkit-clip-path: inset(50%) !important;
+            clip-path: inset(50%) !important;
+            height: 1px !important;
+            margin: -1px !important;
+            overflow: hidden !important;
+            padding: 0 !important;
+            position: absolute !important;
+            width: 1px !important;
+            white-space: nowrap !important;
+        }
+        
+        a:hover,
+        a:focus {
+            color: #0645BC !important;
+            text-decoration: underline !important;
+        }
+        
+        .boxshadow {
+            box-shadow: 6px 6px 30px grey;
+        }
+        
+        .advgb-accordion-item {
+            color: black;
+            background-color: #FDE70E;
+        }
+        
+        .c-accordion__item {}
+        /* The accordion item container */
+        
+        .c-accordion__title {
+            padding: .6em .3em;
+            border-bottom: 3px solid #DEDED9;
+        }
+    </style>
+
+    <!-- *********************************************************************************-->
+    <link rel="stylesheet" href="tablecssfix.css" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- *********************************************************************************-->
+</head>
+
+<body>
+    <!-- ******************************************************************* -->
+    <div id="app">
+        <div class="wp-block-group alignwide">
+            <div class="wp-block-group__inner-container">
+                <p style="padding-top: 0px">
+
+                    <input type="text" v-model="search" class="form-control" placeholder="Suche" />
+                </p>
+                <strong>Hinweis:</strong> Klicken Sie auf einen der Medienpädagogische Settings oder Lehr-/Lernszenarien um die Tabelle danach zu filtern.
+                <div class="overflowScrollX trans180">
+                    <table class="table table-bordered trans180">
+                        <thead>
+                            <tr class="borderBottomSeperate backgroundWhite">
+                                <th class="borderRightSeperate notSelectDown"><span class="spaceSpan"></span></td>
+                                    <th class="strongText borderRightSeperate notSelectDown" colspan="12">Medienpädagogische Settings</td>
+                                        <th class="strongText borderRightSeperate notSelectDown" colspan="6">Lehr-/Lernszenarien</td>
+                                            <th colspan="2">&nbsp;</td>
+                            </tr>
+                            <tr class="rotate90 borderBottomSeperate toolTable">
+                                <th class="strongText borderRightSeperate notSelectDown" v-on:click="sortBy('name')" rowspan="2">
+                                    Tool/Service
+                                    <!-- Arrow Right -->
+                                    <svg v-if="sortKey == 1" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M10.146 4.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L12.793 8l-2.647-2.646a.5.5 0 0 1 0-.708z"/>
+                                            <path fill-rule="evenodd" d="M2 8a.5.5 0 0 1 .5-.5H13a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8z"/>
+                                        </svg>
+
+                                    <!-- Arrow Down -->
+                                    <svg v-if="sortKey == 2" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-down" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M4.646 9.646a.5.5 0 0 1 .708 0L8 12.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z"/>
+                                            <path fill-rule="evenodd" d="M8 2.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V3a.5.5 0 0 1 .5-.5z"/>
+                                        </svg>
+
+                                    <!-- Arrow Up -->
+                                    <svg v-if="sortKey == 3" width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-up" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-1 0V4a.5.5 0 0 1 .5-.5z"/>
+                                            <path fill-rule="evenodd" d="M7.646 2.646a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8 3.707 5.354 6.354a.5.5 0 1 1-.708-.708l3-3z"/>
+                                        </svg>
+
+                                </th>
+                                <th v-on:click="filterBy('0')" class="w44" rowspan="2"><span>
+                                        Kommunikation</span>
+                                    <i class="material-icons md-18 iconRotate">add</i></td>
+                                    <th v-on:click="filterBy('1')" rowspan="2" class="w44"><span>Kommunikation synchron [1]</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('2')" rowspan="2" class="w44"><span>Kommunikation asynchron</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('3')" rowspan="2" class="w44"><span>Kollaboration</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('4')" rowspan="2" class="w44"><span>Überprüfung</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('5')" rowspan="2" class="w44"><span>formativ</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('6')" rowspan="2" class="w44"><span>summativ</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('7')" rowspan="2" class="w44"><span>Produkt</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('8')" rowspan="2" class="w44"><span>Klausur</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('9')" rowspan="2" class="w44"><span>Mündliche Prüfung</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('10')" rowspan="2" class="w44"><span>Evaluation [3]</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('11')" rowspan="2" class="borderRightSeperate w44"><span>Selbstevaluation</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('12')" rowspan="2" class="w44"> <span>Angereicherte Präsenzlehre</span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('13')" rowspan="2" class="w97"><span>Blended Learning <br><small>(Online und Offline-Phasen wechseln sich in sinnvoller Verknüpfung ab)</small></span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('14')" rowspan="2" class="w97"><span>Hybrid Distance Learning <br><small> (in Kombination mit kleinen Präsenzgruppen)</small></span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('15')" rowspan="2" class="w70"><span>Distance Learning<br><small>(webbasiert)</small></span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th td v-on:click="filterBy('16')" rowspan="2" class="w70"><span>Distance Learning <br><small>synchron</small></span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th v-on:click="filterBy('17')" rowspan="2" class="borderRightSeperate w70"><span>Distance Learnning <br><small>asynchron</small></span><i class="material-icons md-18 iconRotate">add</i></th>
+                                    <th rowspan="2" class="pr-100 w144"><span>Informationen/Anleitungen</span><i class="material-icons md-18 iconRotate">add</i></td>
+                                        <th td rowspan="2" class="w58"><span>Beratungen/WB</span><i class="material-icons md-18 iconRotate">add</i></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr></tr>
+                            <tr v-for="tool in filteredTools" class="tr-striped tableContent">
+                                <td class="tableContentLeftImp borderRightSeperate noHover link" v-html="tool.name"></td>
+                                <td>{{ hasScenario(tool, 0) }}</td>
+                                <td>{{ hasScenario(tool, 1) }}</td>
+                                <td>{{ hasScenario(tool, 2) }}</td>
+                                <td>{{ hasScenario(tool, 3) }}</td>
+                                <td>{{ hasScenario(tool, 4) }}</td>
+                                <td>{{ hasScenario(tool, 5) }}</td>
+                                <td>{{ hasScenario(tool, 6) }}</td>
+                                <td>{{ hasScenario(tool, 7) }}</td>
+                                <td>{{ hasScenario(tool, 8) }}</td>
+                                <td>{{ hasScenario(tool, 9) }}</td>
+                                <td>{{ hasScenario(tool, 10) }}</td>
+                                <td class="borderRightSeperate">{{ hasScenario(tool, 11) }}</td>
+                                <td>{{ hasScenario(tool, 12) }}</td>
+                                <td>{{ hasScenario(tool, 13) }}</td>
+                                <td>{{ hasScenario(tool, 14) }}</td>
+                                <td>{{ hasScenario(tool, 15) }}</td>
+                                <td>{{ hasScenario(tool, 16) }}</td>
+                                <td class="borderRightSeperate">{{ hasScenario(tool, 17) }}</td>
+                                <td class="tableContentLeftImp whiteSpaceNoWrap link" v-html="tool.instructionLink"></td>
+                                <td class="tableContentLeftImp link" v-html="tool.helpLink"></td>
+                            </tr>
+                            <tbody>
+                    </table>
+                </div>
+                <!-- ******************************************************************* -->
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="vue.js"></script>
+    <script src="tablejs.js"></script>
+</body>
+
+</html>
