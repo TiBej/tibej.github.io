@@ -229,7 +229,7 @@ const jsonToolList = `
               15,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/methoden/organisieren/dateien-versenden/\' target='_blank'>digitallernen.ch</a>",
+           "instructionLink":"<a href='https://www.digitallernen.ch/methoden/organisieren/' target='_blank'>digitallernen.ch</a>",
            "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
@@ -245,7 +245,7 @@ const jsonToolList = `
               16,
               17
            ],
-           "instructionLink":"<a href=\'https://www.digitallernen.ch/methoden/organisieren/dateiablage-mit-switchdrive/\' target='_blank'>digitallernen.ch</a>",
+           "instructionLink":"<a href='https://www.digitallernen.ch/methoden/organisieren/' target='_blank'>digitallernen.ch</a>",
            "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'>FDL</a>"
         },
         {
