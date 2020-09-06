@@ -177,3 +177,7 @@ th.hightlight {
 .trans180 {
     transform: rotateX(180deg);
 }
+
+.tableContent th {
+    font-weight: 500 !important;
+}
