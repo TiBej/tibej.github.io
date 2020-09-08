@@ -494,6 +494,7 @@ $(document).ready(function() {
     $(".overflowScrollX ").scroll(function() {
         var scrollPos = $('.overflowScrollX').scrollLeft();
         $(".table tr th:nth-child(1)").css('left', scrollPos);
+        $(".table tr th:nth-child(1)").css('z-index', 1);
         if (scrollPos > 0) {
             $(".table tr th:nth-child(1)").css('background-color', "white");
         } else {

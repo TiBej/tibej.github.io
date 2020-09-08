@@ -185,7 +185,7 @@ th.hightlight {
 table tr th:nth-child(1) {
     left: 0;
     width: 256px;
-    position: sticky !important;
+    position: absolute !important;
     z-index: 1;
     background-color: inherit;
 }
