@@ -18,9 +18,6 @@
 table {
     overflow: hidden;
     margin-bottom: 0px !important;
-    max-width: 100vw;
-    display: block;
-    border: 0px;
 }
 
 .tableContent>td {
@@ -181,11 +178,14 @@ th.hightlight {
     transform: rotateX(180deg);
 }
 
-table tr th:nth-child(1),
-table tr td:nth-child(1) {
+.tableContent th {
+    font-weight: 500 !important;
+}
+
+table tr th:nth-child(1) {
     left: 0;
     width: 256px;
     position: sticky !important;
     z-index: 1;
-    background-color: green;
+    background-color: inherit;
 }

@@ -1,28 +1,28 @@
-iframe {
-	height: 2000px;
-	width: 100%;
+.toolTableDiv>iframe {
+    height: 2000px;
+    width: 100%;
 }
 
-@media (min-width: 576px) { 
-	iframe {
-		height: 1960px !important;
-	}
+@media (min-width: 576px) {
+    .toolTableDiv>iframe {
+        height: 1960px !important;
+    }
 }
 
 @media (min-width: 768px) {
-	iframe {
-		height: 1960px !important;
-	}
+    .toolTableDiv>iframe {
+        height: 1960px !important;
+    }
 }
 
 @media (min-width: 992px) {
-	iframe {
-		height: 1960px !important;
-	}
+    .toolTableDiv>iframe {
+        height: 1960px !important;
+    }
 }
 
 @media (min-width: 1200px) {
-	iframe {
-		height: 1940px !important;
-	}
+    .toolTableDiv>iframe {
+        height: 1940px !important;
+    }
 }
