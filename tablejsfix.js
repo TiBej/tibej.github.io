@@ -491,16 +491,25 @@ $(document).ready(function() {
         });
     });
 
-    $(".overflowScrollX ").scroll(function() {
-        var scrollPos = $('.overflowScrollX').scrollLeft();
-        $(".table tr th:nth-child(1)").css('left', scrollPos);
-        $(".table tr th:nth-child(1)").css('z-index', 1);
-        if (scrollPos > 0) {
-            $(".table tr th:nth-child(1)").css('background-color', "white");
-        } else {
-            $(".table tr th:nth-child(1)").css('background-color', "inherit");
-        }
-    });
+    // not for all userAgents
+    if ((navigator.userAgent.search("Chrome") >= 0) || 
+    (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0) ||
+    (navigator.userAgent.search("MSIE") >= 0))  {
+
+      // only for desktops
+      if ($(window).width() > 768) {
+         $(".overflowScrollX ").scroll(function() {
+            var scrollPos = $('.overflowScrollX').scrollLeft();
+            $(".table tr th:nth-child(1)").css('left', scrollPos);
+            $(".table tr th:nth-child(1)").css('z-index', 1);
+            if (scrollPos > 0) {
+                  $(".table tr th:nth-child(1)").css('background-color', "white");
+            } else {
+                  $(".table tr th:nth-child(1)").css('background-color', "inherit");
+            }
+       });
+      }
+    }
 });
 
 Array.prototype.remove = function() {
