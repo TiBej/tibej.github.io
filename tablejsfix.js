@@ -367,7 +367,7 @@ const jsonToolList = `
            "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'></a>"
         },
         {
-           "name":"<a href='https://www.digitallernen.ch/methoden/organisieren/dateiablage-mit-laufwerk-fhnw/' target='_blank'>Laufwerke FHNW</a>",
+           "name":"<a href='https://www.digitallernen.ch/methoden/organisieren/' target='_blank'>Laufwerke FHNW</a>",
            "scenario":[
               3,
               12,
@@ -380,7 +380,7 @@ const jsonToolList = `
            "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'></a>"
         },
         {
-           "name":"<a href='https://www.digitallernen.ch/methoden/organisieren/literatur-verwalten/' target='_blank'>Literaturverwaltung (Citavi, Litlink, Zotero)</a>",
+           "name":"<a href='https://www.digitallernen.ch/methoden/organisieren/' target='_blank'>Literaturverwaltung (Citavi, Litlink, Zotero)</a>",
            "scenario":[
               3,
               12,
