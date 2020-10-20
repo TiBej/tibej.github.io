@@ -336,7 +336,7 @@ const jsonToolList = `
               15,
               16
            ],
-           "instructionLink":"<a href=\'https://welcome.inside.fhnw.ch/organisation/hochschule/services/cit/seiten/videokonferenz.aspx\' target='_blank'>CIT</a>",
+           "instructionLink":"<a href=\'https://welcome.inside.fhnw.ch/hsle2025/Seiten/Webex.aspx' target='_blank'>CIT</a>",
            "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'></a>"
         },
         {
