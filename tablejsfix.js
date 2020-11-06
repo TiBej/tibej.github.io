@@ -324,7 +324,7 @@ const jsonToolList = `
            "helpLink":"<a href=\'https://www.digitallernen.ch/termine/\' target='_blank'></a>"
         },
         {
-           "name":"<a href='https://groups.inside.fhnw.ch/workspace_sites/HSLEDemo/Pages/WebEx.aspx' target='_blank'>Webex</a>",
+           "name":"<a href='https://welcome.inside.fhnw.ch/hsle2025/Seiten/Webex.aspx' target='_blank'>Webex</a>",
            "scenario":[
               0,
               1,
