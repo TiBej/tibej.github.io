@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=1200, initial-scale=1">
+    <title>Navigation</title>
+    <link media="all" rel="stylesheet" href="css/main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')
+    </script>
+    <script src="js/jquery.main.js"></script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="navigation-row">
+            <div class="items-row">
+                <div class="col open-close">
+                    <div class="">
+                        <a href="#" class="opener link-item link-black">Tools</a>
+                        <div class="No!slide">
+                            <div class="bg-black">
+                                <ul v-for="tool in filteredTools" class="list-items hovererd-area">
+                                    <li>
+                                        <a href="#" v-on:click="activeToolName = tool.name" v-html="tool.name"></a>
+                                        <div class="hover-box">
+                                            <strong class="title" v-html="tool.name"></strong>
+                                            <div class="box-wrap">
+                                                <span class="text-transform">Titel</span>
+                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore in id reiciendis vel nemo non sunt voluptatem. Neque, nihil provident ullam consequatur aliquam explicabo, ex, aspernatur doloribus culpa
+                                                    suscipit voluptate?</p>
+                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis accusantium autem unde! Harum, repellat dolor fugiat maxime laudantium.</p>
+                                            </div>
+                                            <div class="box-wrap">
+                                                <span class="text-transform">LEHR/LERNSZENARIEN</span>
+                                                <ul class="list-details">
+                                                    <li v-if="hasScenario(tool, 12)">Angerechterte Präsenzlehre</li>
+                                                    <li v-if="hasScenario(tool, 13)">Blended Learning</li>
+                                                    <li v-if="hasScenario(tool, 14)">Hybrid Distance Learning</li>
+                                                    <li v-if="hasScenario(tool, 15)">Distance Learning werkaaei</li>
+                                                    <li v-if="hasScenario(tool, 16)">Distance Learning synchron</li>
+                                                    <li v-if="hasScenario(tool, 17)">Distance Learning asynchron</li>
+                                                </ul>
+                                            </div>
+                                            <div class="box-wrap">
+                                                <span class="text-transform">MEDIENPÄDAGOGISCHE  SETTINGS</span>
+                                                <ul class="list-details has-bg">
+                                                    <li>I. Kommunikation <span class="arrow">></span></li>
+                                                    <li>II. Kollaboration <span class="arrow">></span></li>
+                                                    <li>
+                                                        III. Überprüfung
+                                                        <ul class="sub-list-detail">
+                                                            <li>-Pradukt <span class="arrow">></span></li>
+                                                            <li>-Klausur <span class="arrow">></span></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>IV Evaluation <span class="arrow">></span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="items-wrap">
+                    <div class="cols-wrap">
+                        <div class="col open-close med">
+                            <div class="active">
+                                <a href="#" class="opener link-item temporary-hidden">MEDIENPÄDAGOGISCHE SETTINGS</a>
+                                <!--<div class="slide slide-close">
+                                    <div class="bg-yellow">
+                                        <ul class="list-items">
+                                            <li><a href="#">Kommunikation</a></li>
+                                            <li><a href="#">Kollaboration</a></li>
+                                            <li><a href="#">Uberprufung</a></li>
+                                            <li><a href="#">Evaluation</a></li>
+                                        </ul>
+                                    </div>
+                                </div>-->
+                            </div>
+                        </div>
+                        <div class="col open-close increase-width collapse-menu active">
+                            <div class="">
+                                <a href="#" class="opener link-item">LEHR-/ LERNSZENARIEN</a>
+                                <div class="slide slide-800">
+                                    <div class="bg-white">
+                                        <ul class="list-detail-area">
+                                            <li><a href="#" v-on:click="filterBy([12])" v-bind:class="['selection-opener', (activeFilterArr.includes(12)) ? 'active' : '']">Angereicherte Prasenzlehre</a></li>
+                                            <li><a href="#" v-on:click="filterBy([13])" v-bind:class="['selection-opener', (activeFilterArr.includes(13)) ? 'active' : '']">Blended Learning</a></li>
+                                            <li><a href="#" v-on:click="filterBy([14])" v-bind:class="[ 'selection-opener', (activeFilterArr.includes(14)) ? 'active' : '']">Hybrid Distance Learning</a></li>
+                                            <li><a href="#" v-on:click="filterBy([15, 16, 17])" v-bind:class="[ 'selection-opener', (activeFilterArr.includes(15) && activeFilterArr.includes(16) && activeFilterArr.includes(17)) ? 'active' : '']">Distance Learning</a></li>
+                                        </ul>
+                                        <ul class="list-row">
+                                            <li><a v-on:click="filterBy([15])" v-bind:class="[(activeFilterArr.includes(15)) ? 'active' : '']" href="#">webbasiert</a></li>
+                                            <li><a v-on:click="filterBy([16])" v-bind:class="[(activeFilterArr.includes(16)) ? 'active' : '']" href="#">synchron</a></li>
+                                            <li><a v-on:click="filterBy([17])" v-bind:class="[(activeFilterArr.includes(17)) ? 'active' : '']" href="#">asynchron</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col open-close">
+                            <input v-model="search" class="link-item" placeholder="(?) Suche_______"></input>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <ul class="list-detail-area">
+                            <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 1 || sc == 2))).some(t => t.name == activeToolName))" class="inner-open-close">
+                                <a href="#" class="inner-opener">Kommunikation</a>
+                                <div class="inner-slide">
+                                    <ul class="list-detail-area-medium">
+                                        <li>
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(1)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">synchron</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items w-50">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(1))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(2)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">asynchron</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items w-50">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(2))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 3))).some(t => t.name == activeToolName))" class="inner-open-close">
+                                <a href="#" class="inner-opener">Kollaboration</a>
+                                <div class="inner-slide">
+                                    <div class="inner-items">
+                                        <ul class="sub-items adjust-width">
+                                            <li v-for="tool in toolList.filter(t => t.scenario.includes(3))">
+                                                <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 5 || sc == 6 || sc == 7 || sc == 8 || sc == 9 || sc == -1))).some(t => t.name == activeToolName))" class="inner-open-close">
+                                <a href="#" class="inner-opener">Überprüfung</a>
+                                <div class="inner-slide">
+                                    <ul class="list-detail-area-medium">
+                                        <li>
+                                            <a href="#" v-bind:class="[(toolList.filter(t => t.scenario.includes(5)).some(t => t.name == activeToolName)) ? 'active' : '']">formativ</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items w-50">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(5))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#" v-bind:class="[(toolList.filter(t => t.scenario.includes(6)).some(t => t.name == activeToolName)) ? 'active' : '']">summativ</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items w-50">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(6))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(7)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Produkt</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items w-50">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(7))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(8)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Klausur</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items w-50">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(8))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(9)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Mündliche Prüfung</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items w-50">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(9))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(-1)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Plagiatsprävention</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items w-50">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(-1))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 10 || sc == 11))).some(t => t.name == activeToolName))" class="inner-open-close">
+                                <a href="#" class="inner-opener">Evalution</a>
+                                <div class="inner-slide">
+                                    <ul class="list-detail-area-medium">
+                                        <li>
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(10)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Evalution</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items w-50">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(10))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(11)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Selbstevalution</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items w-50">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(11))">
+                                                        <a href="#" v-bind:class="['item-box', (activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vue.js "></script>
+    <script src="js/module.js "></script>
+</body>
+
+</html>
