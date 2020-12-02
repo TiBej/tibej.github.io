@@ -20,7 +20,7 @@
             <div class="items-row">
                 <div class="col open-close">
                     <div class="">
-                        <a href="#" class="opener link-item link-black">Tools</a>
+                        <a href="#" onClick="window.location.reload();" class="opener link-item link-black">Tools</a>
                         <div class="No!slide">
                             <div class="bg-black">
                                 <ul v-for="tool in filteredTools" class="list-items hovererd-area">
@@ -40,7 +40,7 @@
                                                     <li v-if="hasScenario(tool, 12)">Angerechterte Präsenzlehre</li>
                                                     <li v-if="hasScenario(tool, 13)">Blended Learning</li>
                                                     <li v-if="hasScenario(tool, 14)">Hybrid Distance Learning</li>
-                                                    <li v-if="hasScenario(tool, 15)">Distance Learning werkaaei</li>
+                                                    <li v-if="hasScenario(tool, 15)">Distance Learning webbasiert</li>
                                                     <li v-if="hasScenario(tool, 16)">Distance Learning synchron</li>
                                                     <li v-if="hasScenario(tool, 17)">Distance Learning asynchron</li>
                                                 </ul>
