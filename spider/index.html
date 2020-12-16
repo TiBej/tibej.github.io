@@ -37,12 +37,23 @@
                                             <div class="box-wrap">
                                                 <span class="text-transform">LEHR/LERNSZENARIEN</span>
                                                 <ul class="list-details">
-                                                    <li v-if="hasScenario(tool, 12)">Angerechterte Präsenzlehre</li>
-                                                    <li v-if="hasScenario(tool, 13)">Blended Learning</li>
-                                                    <li v-if="hasScenario(tool, 14)">Hybrid Distance Learning</li>
-                                                    <li v-if="hasScenario(tool, 15)">Distance Learning webbasiert</li>
-                                                    <li v-if="hasScenario(tool, 16)">Distance Learning synchron</li>
-                                                    <li v-if="hasScenario(tool, 17)">Distance Learning asynchron</li>
+                                                    <li v-if="hasScenario(tool, 12)"><span href="#" data-tooltip="Anreicherung der Präsenzlehre durch Bereitstellung begleitender Materialien. 
+Files (PDF, Word etc.) zu den Veranstaltungen werden begleitend online, bspw. auf dem LMS Moodle bereitgestellt.
+Den Kommunikations- und Kooperationsmedien wird eine didaktische Funktion zugewiesen. Über ein LMS wie Moodle können Materialien ausgetauscht, Foren, Wikis und mehr erstellt werden. 
+">Angereichterte Präsenzlehre</span></li>
+                                                    <li v-if="hasScenario(tool, 13)"><span href="#" data-tooltip="Integrative Kombination und Verzahnung von Online- und Präsenzphasen.
+Die Onlinephasen sind integraler Teil der Veranstaltung und bieten Raum für u.a. Gruppenaustausch, Übungen, Selbstlernmaterialien, Visualisierungen, interaktive Animationen oder Self-Assessments. Eine enge Verzahnung der Online- und Präsenzphasen entsteht durch didaktisch sinnvolle Verknüpfung.
+Bei synchronen Präsenzphasen sind alle Teilnehmenden im selben Setting dabei, d.h. alle Studierenden vor Ort in Präsenz im Seminarraum oder im webbasieren Raum einer kollaborativen 3D-Umgebung in Form von Avataren. 
+">Blended Learning</span></li>
+                                                    <li v-if="hasScenario(tool, 14)"><span href="#" data-tooltip="Ein Teil der Studierenden oder Teilnehmenden sind in physischer Präsenz anwesend und parallel dazu ein anderer Teil der gleichen LV-Gruppe von «remote» bspw. «zu Hause» verbunden. Eine Veranstaltung kann in synchronen parallelen Settings (Präsenz & remote) durchgeführt werden oder diese werden als «Hybrid-Präsenzphasen» zwischen reinen Online-Phasen konzeptioniert. 
+Dieses Remote- und Live-Setting bedarf eines hohen Aufwandes bezüglich Organisation, Planung und eine professionellen Kommunikations- bzw. Moderationskompetenz sowie technologisches Know-How. 
+Das Modell lässt sich erweitern durch verschiedene in Präsenz stattfindende Angebote wie Sprechstunden, Gruppenarbeiten, Tutorate mit Übungsgruppen etc.
+">Hybrid Distance Learning</span></li>
+                                                    <li v-if="hasScenario(tool, 15)"><span href="#" data-tooltip="«Distance Learning» ist als Oberbegriff eines Lehr-/Lernsettings zu verstehen, welches ausschliesslich „online“ stattfindet; d.h. Lernen/Lehren über eine gewisse Distanz, ohne «face-to-face» in physischer Anwesenheit oder Präsenz. 
+Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation oder einer Mischung beider Kommunikationsformen. 
+">Distance Learning webbasiert</span></li>
+                                                    <li v-if="hasScenario(tool, 16)"><span href="#" data-tooltip="Rein synchrone Umsetzung eines Lehr-/Lernsettings ohne physische Präsenz und ohne asynchrone Anteile. Nutzung einer entsprechenden Kommunikationsplattform wie ein Audio-/Videokonferenzsystem oder eine kollaborative 3D Umgebung.">Distance Learning synchron</span></li>
+                                                    <li v-if="hasScenario(tool, 17)"><span href="#" data-tooltip="Rein asynchrone Umsetzung eines Lehr-/Lernsettings ohne physische Präsenz und ohne synchrone Anteile. Nutzung einer entsprechenden Kommunikationsplattform wie LMS Moodle, oder Dokumentenablagesysteme, Videoplattformen etc.">Distance Learning asynchron</span></li>
                                                 </ul>
                                             </div>
                                             <div class="box-wrap">
