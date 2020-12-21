@@ -20,7 +20,7 @@
             <div class="items-row">
                 <div class="col open-close">
                     <div class="">
-                        <a href="#" onClick="window.location.reload();" class="opener link-item link-black">Tools</a>
+                        <a href="#" onClick="window.location.reload();" class="link-yellow link-item">MENU</a>
                         <div class="No!slide">
                             <div class="bg-black">
                                 <ul v-for="tool in filteredTools" class="list-items hovererd-area">
@@ -37,23 +37,12 @@
                                             <div class="box-wrap">
                                                 <span class="text-transform">LEHR/LERNSZENARIEN</span>
                                                 <ul class="list-details">
-                                                    <li v-if="hasScenario(tool, 12)"><span href="#" data-tooltip="Anreicherung der Präsenzlehre durch Bereitstellung begleitender Materialien. 
-Files (PDF, Word etc.) zu den Veranstaltungen werden begleitend online, bspw. auf dem LMS Moodle bereitgestellt.
-Den Kommunikations- und Kooperationsmedien wird eine didaktische Funktion zugewiesen. Über ein LMS wie Moodle können Materialien ausgetauscht, Foren, Wikis und mehr erstellt werden. 
-">Angereichterte Präsenzlehre</span></li>
-                                                    <li v-if="hasScenario(tool, 13)"><span href="#" data-tooltip="Integrative Kombination und Verzahnung von Online- und Präsenzphasen.
-Die Onlinephasen sind integraler Teil der Veranstaltung und bieten Raum für u.a. Gruppenaustausch, Übungen, Selbstlernmaterialien, Visualisierungen, interaktive Animationen oder Self-Assessments. Eine enge Verzahnung der Online- und Präsenzphasen entsteht durch didaktisch sinnvolle Verknüpfung.
-Bei synchronen Präsenzphasen sind alle Teilnehmenden im selben Setting dabei, d.h. alle Studierenden vor Ort in Präsenz im Seminarraum oder im webbasieren Raum einer kollaborativen 3D-Umgebung in Form von Avataren. 
-">Blended Learning</span></li>
-                                                    <li v-if="hasScenario(tool, 14)"><span href="#" data-tooltip="Ein Teil der Studierenden oder Teilnehmenden sind in physischer Präsenz anwesend und parallel dazu ein anderer Teil der gleichen LV-Gruppe von «remote» bspw. «zu Hause» verbunden. Eine Veranstaltung kann in synchronen parallelen Settings (Präsenz & remote) durchgeführt werden oder diese werden als «Hybrid-Präsenzphasen» zwischen reinen Online-Phasen konzeptioniert. 
-Dieses Remote- und Live-Setting bedarf eines hohen Aufwandes bezüglich Organisation, Planung und eine professionellen Kommunikations- bzw. Moderationskompetenz sowie technologisches Know-How. 
-Das Modell lässt sich erweitern durch verschiedene in Präsenz stattfindende Angebote wie Sprechstunden, Gruppenarbeiten, Tutorate mit Übungsgruppen etc.
-">Hybrid Distance Learning</span></li>
-                                                    <li v-if="hasScenario(tool, 15)"><span href="#" data-tooltip="«Distance Learning» ist als Oberbegriff eines Lehr-/Lernsettings zu verstehen, welches ausschliesslich „online“ stattfindet; d.h. Lernen/Lehren über eine gewisse Distanz, ohne «face-to-face» in physischer Anwesenheit oder Präsenz. 
-Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation oder einer Mischung beider Kommunikationsformen. 
-">Distance Learning webbasiert</span></li>
-                                                    <li v-if="hasScenario(tool, 16)"><span href="#" data-tooltip="Rein synchrone Umsetzung eines Lehr-/Lernsettings ohne physische Präsenz und ohne asynchrone Anteile. Nutzung einer entsprechenden Kommunikationsplattform wie ein Audio-/Videokonferenzsystem oder eine kollaborative 3D Umgebung.">Distance Learning synchron</span></li>
-                                                    <li v-if="hasScenario(tool, 17)"><span href="#" data-tooltip="Rein asynchrone Umsetzung eines Lehr-/Lernsettings ohne physische Präsenz und ohne synchrone Anteile. Nutzung einer entsprechenden Kommunikationsplattform wie LMS Moodle, oder Dokumentenablagesysteme, Videoplattformen etc.">Distance Learning asynchron</span></li>
+                                                    <li v-if="hasScenario(tool, 12)"><span href="#" data-tooltip="Anreicherung der Präsenzlehre durch Bereitstellung begleitender Materialien. Files (PDF, Word etc.) zu den Veranstaltungen werden begleitend online, bspw. auf dem LMS Moodle bereitgestellt.Den Kommunikations- und Kooperationsmedien wird eine didaktische Funktion zugewiesen. Über ein LMS wie Moodle können Materialien ausgetauscht, Foren, Wikis und mehr erstellt werden.">Angereichterte Präsenzlehre<sup>(?)</sup></span></li>
+                                                    <li v-if="hasScenario(tool, 13)"><span href="#" data-tooltip="Integrative Kombination und Verzahnung von Online- und Präsenzphasen.Die Onlinephasen sind integraler Teil der Veranstaltung und bieten Raum für u.a. Gruppenaustausch, Übungen, Selbstlernmaterialien, Visualisierungen, interaktive Animationen oder Self-Assessments. Eine enge Verzahnung der Online- und Präsenzphasen entsteht durch didaktisch sinnvolle Verknüpfung.Bei synchronen Präsenzphasen sind alle Teilnehmenden im selben Setting dabei, d.h. alle Studierenden vor Ort in Präsenz im Seminarraum oder im webbasieren Raum einer kollaborativen 3D-Umgebung in Form von Avataren.">Blended Learning<sup>(?)</sup></span></li>
+                                                    <li v-if="hasScenario(tool, 14)"><span href="#" data-tooltip="Ein Teil der Studierenden oder Teilnehmenden sind in physischer Präsenz anwesend und parallel dazu ein anderer Teil der gleichen LV-Gruppe von «remote» bspw. «zu Hause» verbunden. Eine Veranstaltung kann in synchronen parallelen Settings (Präsenz & remote) durchgeführt werden oder diese werden als «Hybrid-Präsenzphasen» zwischen reinen Online-Phasen konzeptioniert. Dieses Remote- und Live-Setting bedarf eines hohen Aufwandes bezüglich Organisation, Planung und eine professionellen Kommunikations- bzw. Moderationskompetenz sowie technologisches Know-How. Das Modell lässt sich erweitern durch verschiedene in Präsenz stattfindende Angebote wie Sprechstunden, Gruppenarbeiten, Tutorate mit Übungsgruppen etc.">Hybrid Distance Learning<sup>(?)</sup></span></li>
+                                                    <li v-if="hasScenario(tool, 15)"><span href="#" data-tooltip="«Distance Learning» ist als Oberbegriff eines Lehr-/Lernsettings zu verstehen, welches ausschliesslich „online“ stattfindet; d.h. Lernen/Lehren über eine gewisse Distanz, ohne «face-to-face» in physischer Anwesenheit oder Präsenz. Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation oder einer Mischung beider Kommunikationsformen.">Distance Learning webbasiert<sup>(?)</sup></span></li>
+                                                    <li v-if="hasScenario(tool, 16)"><span href="#" data-tooltip="Rein synchrone Umsetzung eines Lehr-/Lernsettings ohne physische Präsenz und ohne asynchrone Anteile. Nutzung einer entsprechenden Kommunikationsplattform wie ein Audio-/Videokonferenzsystem oder eine kollaborative 3D Umgebung.">Distance Learning synchron<sup>(?)</sup></span></li>
+                                                    <li v-if="hasScenario(tool, 17)"><span href="#" data-tooltip="Rein asynchrone Umsetzung eines Lehr-/Lernsettings ohne physische Präsenz und ohne synchrone Anteile. Nutzung einer entsprechenden Kommunikationsplattform wie LMS Moodle, oder Dokumentenablagesysteme, Videoplattformen etc.">Distance Learning asynchron<sup>(?)</sup></span></li>
                                                 </ul>
                                             </div>
                                             <div class="box-wrap">
@@ -82,17 +71,17 @@ Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation o
                     <div class="cols-wrap">
                         <div class="col open-close med">
                             <div class="active">
-                                <a href="#" class="opener link-item temporary-hidden">MEDIENPÄDAGOGISCHE SETTINGS</a>
-                                <!--<div class="slide slide-close">
+                                <a href="#" class="opener link-item">MEDIENPÄDAGOGISCHE SETTINGS</a>
+                                <div class="slide slide-close">
                                     <div class="bg-yellow">
                                         <ul class="list-items">
                                             <li><a href="#">Kommunikation</a></li>
                                             <li><a href="#">Kollaboration</a></li>
-                                            <li><a href="#">Uberprufung</a></li>
+                                            <li><a href="#">Überprufung</a></li>
                                             <li><a href="#">Evaluation</a></li>
                                         </ul>
                                     </div>
-                                </div>-->
+                                </div>
                             </div>
                         </div>
                         <div class="col open-close increase-width collapse-menu active">
@@ -121,24 +110,24 @@ Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation o
                     </div>
                     <div class="detail-box">
                         <ul class="list-detail-area">
-                            <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 1 || sc == 2))).some(t => t.name == activeToolName))" class="inner-open-close">
+                            <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 3))).some(t => t.name == activeToolName))" class="inner-open-close">
                                 <a href="#" class="inner-opener">Kommunikation</a>
                                 <div class="inner-slide">
                                     <ul class="list-detail-area-medium">
-                                        <li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 1))).some(t => t.name == activeToolName))">
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(1)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">synchron</a>
                                             <div class="inner-items">
-                                                <ul class="sub-items w-50">
+                                                <ul class="sub-items">
                                                     <li v-for="tool in toolList.filter(t => t.scenario.includes(1))">
                                                         <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 2))).some(t => t.name == activeToolName))">
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(2)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">asynchron</a>
                                             <div class="inner-items">
-                                                <ul class="sub-items w-50">
+                                                <ul class="sub-items">
                                                     <li v-for="tool in toolList.filter(t => t.scenario.includes(2))">
                                                         <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
                                                     </li>
@@ -167,7 +156,7 @@ Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation o
                                         <li>
                                             <a href="#" v-bind:class="[(toolList.filter(t => t.scenario.includes(5)).some(t => t.name == activeToolName)) ? 'active' : '']">formativ</a>
                                             <div class="inner-items">
-                                                <ul class="sub-items w-50">
+                                                <ul class="sub-items">
                                                     <li v-for="tool in toolList.filter(t => t.scenario.includes(5))">
                                                         <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
                                                     </li>
@@ -177,7 +166,7 @@ Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation o
                                         <li>
                                             <a href="#" v-bind:class="[(toolList.filter(t => t.scenario.includes(6)).some(t => t.name == activeToolName)) ? 'active' : '']">summativ</a>
                                             <div class="inner-items">
-                                                <ul class="sub-items w-50">
+                                                <ul class="sub-items">
                                                     <li v-for="tool in toolList.filter(t => t.scenario.includes(6))">
                                                         <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
                                                     </li>
@@ -187,7 +176,7 @@ Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation o
                                         <li>
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(7)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Produkt</a>
                                             <div class="inner-items">
-                                                <ul class="sub-items w-50">
+                                                <ul class="sub-items">
                                                     <li v-for="tool in toolList.filter(t => t.scenario.includes(7))">
                                                         <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
                                                     </li>
@@ -197,7 +186,7 @@ Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation o
                                         <li>
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(8)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Klausur</a>
                                             <div class="inner-items">
-                                                <ul class="sub-items w-50">
+                                                <ul class="sub-items">
                                                     <li v-for="tool in toolList.filter(t => t.scenario.includes(8))">
                                                         <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
                                                     </li>
@@ -207,7 +196,7 @@ Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation o
                                         <li>
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(9)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Mündliche Prüfung</a>
                                             <div class="inner-items">
-                                                <ul class="sub-items w-50">
+                                                <ul class="sub-items">
                                                     <li v-for="tool in toolList.filter(t => t.scenario.includes(9))">
                                                         <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
                                                     </li>
@@ -217,7 +206,7 @@ Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation o
                                         <li>
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(-1)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Plagiatsprävention</a>
                                             <div class="inner-items">
-                                                <ul class="sub-items w-50">
+                                                <ul class="sub-items">
                                                     <li v-for="tool in toolList.filter(t => t.scenario.includes(-1))">
                                                         <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
                                                     </li>
@@ -234,7 +223,7 @@ Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation o
                                         <li>
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(10)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Evalution</a>
                                             <div class="inner-items">
-                                                <ul class="sub-items w-50">
+                                                <ul class="sub-items">
                                                     <li v-for="tool in toolList.filter(t => t.scenario.includes(10))">
                                                         <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
                                                     </li>
@@ -244,7 +233,7 @@ Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation o
                                         <li>
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(11)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Selbstevalution</a>
                                             <div class="inner-items">
-                                                <ul class="sub-items w-50">
+                                                <ul class="sub-items">
                                                     <li v-for="tool in toolList.filter(t => t.scenario.includes(11))">
                                                         <a href="#" v-bind:class="['item-box', (activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
                                                     </li>
@@ -265,4 +254,4 @@ Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation o
     <script src="js/module.js "></script>
 </body>
 
-</html>
+</html>c

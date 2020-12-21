@@ -50,7 +50,7 @@
         [paramMC,'classMCcontainer','circle_main'],
         [`Kommunikation`,'classMC1'],
         [`Kollaboration`,'zero_sub classMC2'],
-        [`Uberpufung`,'classMC3'],
+        [`Überpufung`,'classMC3'],
         [`Evaluation`,'classMC4'],
     ]
 
@@ -67,7 +67,7 @@
             [paramSC,'circle_sub_item','classMC2'],
             [`zero_sub`,'zero_sub'],
         ],
-        //Uberpufung
+        //Überpufung
         [
             [paramSC,'circle_sub_item','classMC3'],
             [`formativ`,'classSC1'],
@@ -75,7 +75,7 @@
             [`klausur`,'classSC3'],
             [`summativ`,'classSC4'],
             [`plagiats${$_wrap}pravention`,'classSC5'],
-            [`mundliche prufung`,'classSC6'],
+            [`mündliche prüfung`,'classSC6'],
         ],
         //Evaluation
         [
@@ -138,7 +138,7 @@
             [`SWITHC drive`,'classTC1'],
             [`SWITHC portfolio`,'classTC1'],
         ],
-        //////Uberpufung
+        //////Überpufung
         // [`formativ`,'classSC1'],
         [
             [paramTC,'circle_target_item','classSC1','classMC3'],
@@ -280,12 +280,16 @@
     }
     .circle_main.active .clickTargetM.nav_circle circle{
         fill: #c6c6c6;
+        pointer-events: none;
+    }
+    .circle_main.active .clickTargetM.nav_circle{
+        pointer-events: none;
     }
 
     @media (orientation: portrait) and (max-width: 580px){
         .main_animation_conteiner{
             width: 100%;
-            height: 200vw;
+            /*height: 200vw;*/
         }
         .main_animation_conteiner svg{
             transform-box: fill-box;
@@ -310,9 +314,6 @@
         </g>
 </svg>
 </div>
-<!--<div class="example-next-block">-->
-    <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus impedit inventore iure modi repellendus temporibus tenetur, unde velit. Accusantium, adipisci consequuntur cumque porro quas quo tenetur voluptate. Architecto, quas sit.</p>-->
-<!--</div>-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://dfrnc.com/lib/gs3.min.js"></script>
@@ -494,6 +495,24 @@
             addTCircle(textTC[i],k);
         }
     }
+    
+    let winWidth = $(window).width();
+    function responsivBlock() {
+
+        $('.main_animation_conteiner').css({"height":"auto"});
+
+        if($(window).height() >= $(window).width() && $(window).width() <= 580){
+            $('.main_animation_conteiner').css({"height":$('.main_animation_conteiner').width()*2});
+        }
+    }
+
+    responsivBlock();
+    $(window).resize(function () {
+        if($(window).width() != winWidth){
+            responsivBlock();
+            winWidth = $(window).width();
+        }
+    })
     ////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////
@@ -577,8 +596,8 @@
         }
 
         if ($('.circle_main.active').hasClass('zero_sub')){
-            tl.add(movePoint(time,'classMC.active','m',kf.xl2/2,kf.cY,0,1),'>')
-            tl.to('.classMC.active .nav_circle',{duration: time,x:(kf.xl1-kf.xl2/2),y:activeNavY-kf.cY,ease:'power1.inOut'},'<')
+            tl.add(movePoint(time,'classMC.active','m',kf.width/2+paramMC.r,kf.cY,0,1),'>')
+            tl.to('.classMC.active .nav_circle',{duration: time,x:(kf.xl1-kf.width/2-paramMC.r),y:activeNavY-kf.cY,ease:'power1.inOut'},'<')
         }
         else{
             tl.add(movePoint(time,'classMC.active','m',kf.xl2,kf.cY,0,1),'>')
@@ -597,7 +616,6 @@
         let tl = gsap.timeline()
 
         let tempSub = $('.classMC.active .circle_sub_item > *').length;
-
         let tempR = (tempSub * (2 * paramSC.r) + (otst*(tempSub-1)))/Math.PI;
         if(tempR < (paramMC.r + paramSC.r + otst)){
             tempR = paramMC.r + paramSC.r + otst;
@@ -614,8 +632,24 @@
 
             let activeIndex = $('.classMC.active .circle_sub_item .classSC.active').index() + 1;
 
-            tl
-              .add(movePoint(time,'classMC.active','s',-kf.xl2/2,0,activeIndex,0),0)
+            ////////////////////
+
+            let tempTar = $('.classMC.active .circle_sub_item .classSC.active .circle_target_item  > *').length;
+            let centPoint;
+            if(tempTar <= 8){
+                centPoint = tempR + (paramSC.r*2) + otst;
+            }
+            if(tempTar > 8){
+                centPoint = tempR + (paramSC.r*2*(tempTar-8)) + otst;
+            }
+            if(centPoint > kf.xl2/2){
+                centPoint = kf.xl2/2 + paramMC.r;
+            }
+            console.log(tempTar)
+            console.log(centPoint)
+            tl.add(movePoint(time,'classMC.active','s',-(centPoint),0,activeIndex,0),0)
+
+            ////////////////////
 
             // if( tempSub % 2 != 0){startGrad -= tempPov/2; }
 
@@ -631,6 +665,8 @@
 
             }
 
+
+
         }else{
 
             for (let i = 1; i <= tempSub; i++){
@@ -641,6 +677,8 @@
                 tl.add(movePoint(time,'classMC.active','s',tempX,tempY,i,0),0)
             }
         }
+
+
         return tl;
     }
 
@@ -696,7 +734,7 @@
         height: $('#multiCircles').attr('height'),
         cY: $('#multiCircles').attr('height')/2,
         xl1: $('#multiCircles').attr('width')-otst-paramMC.r,
-        xl2: $('#multiCircles').attr('width')-otst*2-paramMC.r*3,
+        xl2: $('#multiCircles').attr('width')-otst*2-paramMC.r*4,
     }
 
     function offClick(){
@@ -782,14 +820,17 @@
                  return 0;
              }
 
-             if($(this).parents('.classSC_item').hasClass('active') == true) {
-                 offClick()
+             if($(this).hasClass('active') == true) {
+
+                 $(this).parents('.classSC_item').removeClass('active')
+                 $(this).removeClass('active')
                  gsap.timeline({onComplete:function () {onnClick()}})
                      .add(movePoint(0.5,'classMC','t',0,0,0,0))
-                     .add(movePoint(0.5,'classMC','s',0,0,0,0),'<')
-                     .add(startPos(),'<')
+                     .add(movel2(1))
+                     // .add(movePoint(0.5,'classMC','s',0,0,0,0),'<')
+                     // .add(startPos(),'<')
 
-                 $('.main_animation_conteiner *').removeClass('active')
+                 // $('.main_animation_conteiner *').removeClass('active')
                  return 0;
 
              }
@@ -826,18 +867,41 @@
          }
 
     })
+    ////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
+    ////////////////////////////////////////////////////////////////////////////////
+
+    function listCategory(classM,classS){
+        offClick()
+        $('.main_animation_conteiner *').removeClass('active')
+
+        $(classM).addClass('active')
+        $(classM + ' .clickTargetM').addClass('active')
+
+        $(classS).addClass('active')
+        $(classS + ' .clickTargetS').addClass('active')
+
+        gsap.timeline({onComplete:function () {onnClick()}})
+            .add(movePoint(0.5,'classMC','t',0,0,0,0))
+            .add(movePoint(1,'classMC','s',0,0,0,0),'<')
+
+            .add(movel1(1,kf.xl1,kf.cY),'<')
+            .add(movel2(1))
+
+        return 0;
+    }
+    ///////////////////////
+    //example
+    //////////////////
+    // listCategory('.classMC3','.classSC3')
+    // or
+    // listCategory('.classMC3')
 
     $('.svgClickToStart').on('click', function(){
-        if($('.classMC').hasClass('active') == true){
-            offClick()
-            gsap.timeline({onComplete:function () {onnClick()}})
-                .add(movePoint(0.5,'classMC','t',0,0,0,0))
-                .add(movePoint(0.5,'classMC','s',0,0,0,0),'<')
-                .add(startPos(),'<')
-
-            $('.main_animation_conteiner *').removeClass('active')
-        }
+        listCategory('.classMC3','.classSC3')
     })
+
+
 
     ////////////////////////////////////////////////////////////////////////////////
     ////////////////////////////////////////////////////////////////////////////////
@@ -868,6 +932,9 @@
     }
 
     startPos();
+
+
+
 
 </script>
 </body>
