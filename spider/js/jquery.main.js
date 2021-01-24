@@ -6,13 +6,6 @@ jQuery(function() {
 
 // open-close init
 function initOpenClose() {
-    jQuery('.open-close').openClose({
-        activeClass: 'active',
-        opener: '.opener',
-        slider: '.slide',
-        animSpeed: 400,
-        effect: 'slide'
-    });
     jQuery('.inner-open-close').openClose({
         activeClass: 'active',
         opener: '.inner-opener',
@@ -20,16 +13,34 @@ function initOpenClose() {
         animSpeed: 400,
         effect: 'slide'
     });
+    jQuery('.open-close').openClose({
+        activeClass: 'active',
+        opener: '.opener',
+        slider: '.slide',
+        animSpeed: 400,
+        effect: 'slide'
+    });
 }
 
 function initShowItems() {
-    jQuery('.list-items a').click(function(e) {
+    jQuery('.list-items:not(.unhover) a').click(function(e) {
         e.preventDefault();
-        jQuery('.list-items a').removeClass('active');
+        jQuery('.list-items:not(.unhover) a').removeClass('active');
         jQuery(this).addClass('active');
         jQuery('body').addClass('detail-active');
         jQuery('.collapse-menu').removeClass('active');
         jQuery('.collapse-menu').find('.slide').addClass('js-slide-hidden');
+        jQuery('.spider-box').removeClass('active');
+    });
+
+    jQuery('.list-items.unhover').click(function(e) {
+        e.preventDefault();
+        jQuery('.list-items:not(.unhover) a').removeClass('active');
+        jQuery('.spider-box').addClass('active');
+        jQuery('.collapse-menu').removeClass('active');
+        jQuery('.collapse-menu').find('.slide').addClass('js-slide-hidden');
+        jQuery('.slide.slide-close').addClass('js-slide-hidden');
+        jQuery('body').removeClass('detail-active');
     });
 
     jQuery('.collapse-menu .opener').click(function() {

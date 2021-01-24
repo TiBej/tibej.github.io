@@ -2,7 +2,7 @@ const jsonToolList = `
 {
     "tool": [{
             "name": "Moodle",
-            "description": "",
+            "description": "Ist das Learning Management System (LMS), welches über alle Hochschulen hinweg an der FHNW genutzt wird und zentral administriert und bewirtschaftet wird. Lernaktivitäten werden in Kursräumen, die von Dozierenden selber gestaltet werden können, organisiert. Mit verschiedenen Lernaktivitäten können verschiedenste Lehr-/Lernsettings realisiert werden.",
             "scenario": [
                 0,
                 2,
@@ -24,7 +24,7 @@ const jsonToolList = `
         },
         {
             "name": "Moodle Wiki",
-            "description": "",
+            "description": "Ist eine Sammlung von untereinander verlinken Seiten, die alle Teilnehmer*innen eines Kurses bearbeiten und ergänzen können. Die Änderungen sind für alle nachvollziehbar und können rückgängig gemacht werden.",
             "scenario": [
                 3,
                 4,
@@ -39,7 +39,7 @@ const jsonToolList = `
         },
         {
             "name": "Moodle Test",
-            "description": "",
+            "description": "Erlaubt das Anlegen von unterschiedlichen Test-Fragen (Multiple Choice, Zuordnungsfragen, Textantworten) und die Überprüfung nach definierten Werten. Die Auswertung der Testergebnisse kann die Grundlage für ein Feedback an Lernende sein. Die Aktivität kann (neben weiteren Anwendungen) als Lernkontrolle, als Prüfung oder als Selbsttest eingesetzt werden.",
             "scenario": [
                 4,
                 5,
@@ -55,7 +55,7 @@ const jsonToolList = `
         },
         {
             "name": "Moodle EtherPad & EtherCalc",
-            "description": "",
+            "description": "Die beiden in Moodle integrierten Lernaktivitäten können von mehreren Personen gelichzeitig verwendet werden um entweder an einem Textdokument (EtherPad) oder an einer Tabelle (EtherCalc) zu arbeiten. Die Import/Export Funktion ermöglicht das Vorbereiten oder das Weiterbearbeiten von Dateien.",
             "scenario": [
                 3,
                 4,
@@ -71,7 +71,7 @@ const jsonToolList = `
         },
         {
             "name": "Moodle Aufgabe",
-            "description": "",
+            "description": "Teilnehmer*innen können unterschiedliche Dateitypen zu einem definierten Zeitpunkt hochladen. Eine Einreichung ist als Einzelarbeit oder als Gruppe möglich und Dozierende können die eingereichte Aufgabe bewerten. Diese Bewertung kann mittels Textfeedback erfolgen oder über eine Datei mit einer Bewertung/einem Feedback. Dozierende können die Aufgabe benoten und diese Note für die Teilnehmer*innen sichtbar machen.",
             "scenario": [
                 4,
                 5,
@@ -87,7 +87,7 @@ const jsonToolList = `
         },
         {
             "name": "Moodle Forum",
-            "description": "",
+            "description": "Über längere Zeit können in einem Forum asynchrone Diskussionen zu einem bestimmten Thema, oder Kursinhalt geführt werden. Verschiedene Typen des Forums erlauben das Eröffnen von neuen Themen, oder ein reines Frage-Antwort-Forum. Beiträge in einem Forum können mit Dateianhängen versehen werden. Je nach Einstellungen erhalten Teilnehmer*innen Benachrichtigungen über neue Beiträge in einem Forum.",
             "scenario": [
                 0,
                 2,
@@ -103,7 +103,7 @@ const jsonToolList = `
         },
         {
             "name": "Moodle Studierenden-Ordner",
-            "description": "",
+            "description": "Diese Aktivität bereitet eine Upload Möglichkeit vor, bei der definiert werden kann, welche Dateitypen hochgeladen werden können und wer die Uploads sehen darf. Weitere Optionen der Aktivität ermöglichen das Einrichten eines zeitlich begrenzten Upload Fensters, welches die Aktivität für eine Produktabgabe einsetzbar macht.",
             "scenario": [
                 3,
                 4,
@@ -120,7 +120,7 @@ const jsonToolList = `
         },
         {
             "name": "Moodle Glossar",
-            "description": "",
+            "description": "Die Aktivität Glossar gleicht einem Wörterbuch, welches Begriffsdefinitionen enthält. Beiträge in einem Glossar können mit Dateianhängen (Mediendateien, Texte, etc) versehen werden oder Links auf externe Seiten enthalten. Eine weitere Option erlaubt Kommentare zu Einträgen im Glossar, welche eine Diskussion unter Teilnehmer*innen zulässt.",
             "scenario": [
                 3,
                 4,
@@ -135,7 +135,7 @@ const jsonToolList = `
         },
         {
             "name": "Moodle Feedback/Befragung",
-            "description": "",
+            "description": "Beide Aktivitäten gleichen sich, indem sie eine Rückmeldung zu einem Thema zulassen. Die Aktivität Feedback erlaubt, verschiedene Fragetypen zu erfassen, die ausgewertet werden können (auch eine externe Auswertung der Antworten ist möglich). Feedback kann anonym erfolgen. Die Aktivität Befragung ist für die Erstellung von Fragebögen in Moodle hilfreich.",
             "scenario": [
                 10,
                 11,
@@ -144,7 +144,7 @@ const jsonToolList = `
         },
         {
             "name": "Digitaler Semesterapparat",
-            "description": "",
+            "description": "Über die Anbindung an den Bibliothekskatalog können digitalisierte Bibliotheksinhalte über Moodle bei der Bibliothek bestellt und im Kursraum als PDF angeboten werden.",
             "scenario": [
                 12,
                 13,
@@ -155,8 +155,9 @@ const jsonToolList = `
         },
         {
             "name": "Turnitin",
-            "description": "",
+            "description": "Als Aktivität in Moodle mit einer Aufgabe verknüpft ermöglicht Turnitin eine Plagiatsüberprüfung der eingereichten Dokumente, die in die Bewertung der Aufgabe integriert ist.",
             "scenario": [
+                -1,
                 4,
                 12,
                 13,
@@ -168,7 +169,7 @@ const jsonToolList = `
         },
         {
             "name": "SWITCH Dienste",
-            "description": "",
+            "description": "Die Stiftung SWITCH ist eine von Schweizer Bildungs- und Forschungseinrichtungen getragene Serviceanbieterin von Internetdiensten. Alle Daten werden in der Schweiz gelagert und die Dienste werden von der Schweiz aus betreut. ",
             "scenario": [
                 0,
                 1,
@@ -206,7 +207,7 @@ const jsonToolList = `
         },
         {
             "name": "SWITCHfilesender",
-            "description": "",
+            "description": "Versenden von grossen Dateien (bis zu 50 GB) an einzelne oder mehrere Emailadressen. Empfänger*innen erhalten per Mail einen Downloadlink zur Datei. Die Absender*in erhält eine Bestätigung der Email-Übermittlung sowie jedes erfolgten Downloads.",
             "scenario": [
                 6,
                 7,
@@ -219,7 +220,7 @@ const jsonToolList = `
         },
         {
             "name": "SWITCHdrive",
-            "description": "",
+            "description": "Ermöglicht die permanente Speicherung von Dateien aller Art in einem 100GB Cloud-Speicher. SWITCHdrive lässt sich ins Filesystem integrieren oder per Webinterface bedienen, SWITCHdrive ist auch ausserhalb des FHNW Netzwerkes verfügbar. Das Webinterface erlaubt die Anzeige von PDF und einigen Bild- und Video-Formaten sowie die Bearbeitung von Office-Dokumenten (auch durch mehrere Bearbeiter*innen gleichzeitig).",
             "scenario": [
                 3,
                 6,
@@ -234,7 +235,7 @@ const jsonToolList = `
         },
         {
             "name": "SWITCHtube",
-            "description": "",
+            "description": "Ist die Video-Plattform für Schweizer Hochschulen und erlaubt die Cloud-Speicherung von Videos auf schweizer Servern. Videos werden in Channels organisiert und können mit unterschiedlichen Nutzungs- und Zugriffsberechtigungen versehen werden. SWITCHtube Benutzer können ihre Videos an andere SWITCHtube Benutzer übertragen. SWITCHtube-Videos lassen sich kommentieren und in andere Webseiten (z.B. in das LMS Moodle) einbinden ohne deren Serverplatz zu beanspruchen.",
             "scenario": [
                 4,
                 6,
@@ -248,7 +249,7 @@ const jsonToolList = `
         },
         {
             "name": "SWITCHcast und annotate",
-            "description": "",
+            "description": "Bietet eine automatisierte Aufzeichnung in entsprechend ausgestatteten Aufzeichnungsräumen wobei jeweils mehrere Audio- und Videoquellen aufgezeichnet werden können. Über SWITCHcast ist die Bearbeitung (Auswahl der Audio-/Videoquellen/einfache Schnittfunktion) sowie die Weitergabe an SWITCHtube oder SWITCHannotate möglich. Letzteres erlaubt Videos mit einer erweiterten Kommentarfunktion zu annotieren.",
             "scenario": [
                 10,
                 11,
@@ -260,7 +261,7 @@ const jsonToolList = `
         },
         {
             "name": "SWITCHinteract",
-            "description": "",
+            "description": "Basierend auf Adobe Connect ermöglicht SWITCHinteract Web-Konferenzen und Teamarbeit über das Web. Neben Audio-Übertragung sind weitere Funktionen Bildschirminhalte teilen, Whiteboard, Dateiaustausch oder Abstimmungen. Die Verbindung ist über verschiedene Endgeräte möglich.",
             "scenario": [
                 0,
                 1,
@@ -274,7 +275,7 @@ const jsonToolList = `
         },
         {
             "name": "Jitsi (SWITCH Open Meet)",
-            "description": "",
+            "description": "Die Videokonferenzlösung über Server, die in der Schweiz stehen. SWITCH Open Meet kann ohne Registrierung verwendet werden und verwendet verschlüsselte Kommunikation. Die vollständige Integration in den Internet-Browser macht keine Installation von Software nötig und ermöglicht eine einfache und schnelle Bedienung.",
             "scenario": [
                 0,
                 1,
@@ -289,7 +290,7 @@ const jsonToolList = `
         },
         {
             "name": "Zoom",
-            "description": "",
+            "description": "Ist eine von der FHNW lizenzierte Video-Konferenzlösung, die allen Mitarbeiter*innen und Student*innen zur Verfügung steht. Zoom bietet die Möglichkeit «Break-Out-Rooms» zu nutzen und erlaubt das Teilen von multimedialen Inhalten. Zoom ist nicht für alle Arten der Kommunikation an der FHNW geeignet und steht der FHNW befristet zur Verfügung. Zoom wird zudem innerhalb der FHNW nicht supportet.",
             "scenario": [
                 0,
                 1,
@@ -304,7 +305,7 @@ const jsonToolList = `
         },
         {
             "name": "Webex",
-            "description": "",
+            "description": "Ist eine von der FHNW lizenzierte Video-Konferenzlösung, die auch die höchste Vertraulichkeitsstufe für Videokonferenzen erfüllt.",
             "scenario": [
                 0,
                 1,
@@ -319,7 +320,7 @@ const jsonToolList = `
         },
         {
             "name": "Jabber",
-            "description": "",
+            "description": "Über die Computer basierte Telefonie Lösung der FHNW lassen sich Festnetz-Telefonnummern ausserhalb der FHNW erreichen sowie Anrufe vom Festnetz beantworten. Zusätzlich kann innerhalb der FHNW eine Chatfunktion und Videotelefonie genutzt werden.",
             "scenario": [
                 0,
                 1,
@@ -332,7 +333,7 @@ const jsonToolList = `
         },
         {
             "name": "Groups Inside",
-            "description": "",
+            "description": "Die Sharepoint Integration ermöglicht das gemeinsame Bearbeiten von Dokumenten und somit die Zusammenarbeit in Gruppen innerhalb der FHNW und mit externen Partner*innen.",
             "scenario": [
                 3,
                 12,
@@ -344,7 +345,7 @@ const jsonToolList = `
         },
         {
             "name": "Laufwerke FHNW",
-            "description": "",
+            "description": "Die FHNW-internen Serverlaufwerke dienen der gemeinsamen Dateiablage und Nutzung. Die Server werden von der FHNW betrieben und gewartet, was die regelmässige Datensicherung miteinschliesst.",
             "scenario": [
                 3,
                 12,
@@ -356,7 +357,7 @@ const jsonToolList = `
         },
         {
             "name": "Literaturverwaltung (Citavi, Litlink, Zotero)",
-            "description": "",
+            "description": "Mit der Gruppenfunktionen unterschiedliche Literaturquellen von Mitarbeiter*innen und Student*innen gemeinsam genutzt und verwaltet werden.",
             "scenario": [
                 3,
                 12,
@@ -368,7 +369,7 @@ const jsonToolList = `
         },
         {
             "name": "MS Teams",
-            "description": "",
+            "description": "Bietet eine Kollaborationsplattform für Gruppen, die das gemeinsame Bearbeiten von Dokumenten sowie verschiedene Kommunikationskanäle wie Chat, Videokonferenzen für projektbasiertes Arbeiten bereitstellt.",
             "scenario": [
                 0,
                 1,
@@ -448,6 +449,13 @@ var app = new Vue({
                 return self.activeFilterArr.includes(keyParsed);
             }
             return false;
+        },
+        getToolNameArrayBySecenario: function(num) {
+            var self = this;
+            var tools = self.toolList.filter(t => t.scenario.includes(num));
+            return Object.keys(tools).map((key) => {
+                return [tools[key].name];
+            });
         }
     }
 });

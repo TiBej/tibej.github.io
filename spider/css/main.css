@@ -80,7 +80,7 @@
  */
 
 html {
-    font-family: sans-serif;
+    font-family:  Raleway,sans-serif;
     /* 1 */
     -ms-text-size-adjust: 100%;
     /* 2 */
@@ -333,7 +333,7 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, monospace;
+    font-family: Raleway, monospace, monospace;
     font-size: 1em;
 }
 
@@ -766,9 +766,14 @@ a {
 }
 
 
-/* body {
-	background: url(../images/bg-main.jpg);
-} */
+ body {
+     /* background: url(../images/bg-main.jpg); */
+    /*background: url(../images/smaller_bg-main.jpg); */
+    /* background: url(../images/small_grey.jpg); */
+    /* background: url(../images/smallest_grey.jpg); */
+    background: url(../images/smallest_bg-main.jpg);
+    /* background-color: rgba(191, 191, 191, 0.5) */
+}
 
 #wrapper {
     position: relative;
@@ -844,13 +849,13 @@ a {
 }
 
 .link-item.link-yellow {
-    background: #fbf000;
+    background:#fde70e;
     width: unset !important;
 }
 
 .bg-black {
     background: #1a171b;
-    color: #fbf000;
+    color:#fde70e;
     padding: 0 0 10px;
 }
 
@@ -868,8 +873,8 @@ a {
     padding: 0 10px;
 }
 
-.list-items li:hover>a {
-    border-color: #fbf000;
+.list-items:not(.unhover) li:hover>a {
+    border-color:#fde70e;
 }
 
 .list-items li:hover .hover-box {
@@ -878,18 +883,18 @@ a {
 }
 
 .list-items li>a {
-    color: #fbf000;
+    color:#fde70e;
     padding: 8px 15px;
     display: block;
     border: 2px solid transparent;
 }
 
-.list-items li>a:hover {
-    border-color: #fbf000;
+.list-items:not(.unhover) li>a:hover {
+    border-color:#fde70e;
 }
 
 .list-items li>a.active {
-    background: #fbf000;
+    background:#fde70e;
     color: #1a171b;
 }
 
@@ -903,7 +908,7 @@ a {
     position: absolute;
     left: 100%;
     top: 0;
-    background: #fbf000;
+    background:#fde70e;
     color: #1a171b;
     padding: 15px;
     opacity: 0;
@@ -966,7 +971,7 @@ a {
 .sub-list-detail {
     padding: 0 15px 0 35px;
     list-style: none;
-    background: #fbf000;
+    background:#fde70e;
     margin: 0 -15px -2px;
 }
 
@@ -994,7 +999,7 @@ a {
 }
 
 .open-close.active .opener:not(.link-black) {
-    background: #fbf000;
+    background:#fde70e;
 }
 
 
@@ -1018,7 +1023,7 @@ a {
 }
 
 .bg-yellow {
-    background: #fbf000;
+    background:#fde70e;
     border: 2px solid #1a171b;
     margin-top: -2px;
 }
@@ -1033,7 +1038,7 @@ a {
     color: #1a171b;
 }
 
-.bg-yellow .list-items li>a:hover {
+.bg-yellow .list-items:not(.unhover) li>a:hover {
     background: #fff;
 }
 
@@ -1041,6 +1046,10 @@ a {
     background: #fff;
     border: 2px solid #1a171b;
     margin-top: -2px;
+}
+
+.hover-white:hover {
+    background-color: white;
 }
 
 .slide-800 {
@@ -1130,10 +1139,14 @@ a {
     display: block;
 }
 
-.detail-box {
+.detail-box, .spider-box {
     display: none;
     margin-right: 2px;
     margin-left: 0px;
+}
+
+.spider-box.active {
+    display: block;
 }
 
 .hide-detail-box {
@@ -1174,7 +1187,7 @@ a {
 }
 
 .detail-box a.active {
-    background: #fbf000;
+    background:#fde70e;
     color: #1a171b;
 }
 
@@ -1280,6 +1293,10 @@ a {
     display: none;
 }
 
+.hidden {
+    display: none;
+}
+
 a:not(.active)~.inner-items .sub-items li a {
     display: none;
 }
@@ -1291,4 +1308,61 @@ a:not(.active)~.inner-items .sub-items li a {
     white-space: nowrap;
     overflow: hidden;
     width: auto;
+}
+
+/* Spider */
+.main_animation_conteiner {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main_animation_conteiner svg {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.main_animation_conteiner .circle-text-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.main_animation_conteiner svg text,
+.main_animation_conteiner .circle-text,
+.circle-text{
+    font-family: Arial;
+    font-weight: 600;
+    text-align: center;
+}
+.clickTargetM,
+.clickTargetS{
+    cursor: pointer;
+}
+.circle_main .clickTargetM.nav_circle circle{
+    transition: all 0.5s 1s;
+}
+.circle_main.active .clickTargetM.nav_circle circle{
+    fill: #c6c6c6;
+    pointer-events: none;
+}
+.circle_main.active .clickTargetM.nav_circle{
+    pointer-events: none;
+}
+
+@media (orientation: portrait) and (max-width: 580px){
+    .main_animation_conteiner{
+        width: 100%;
+        /*height: 200vw;*/
+    }
+    .main_animation_conteiner svg{
+        transform-box: fill-box;
+        transform-origin: 50% 50%;
+        transform: rotate(-90deg) scale(2);
+    }
+    .main_animation_conteiner svg foreignObject{
+        transform-box: fill-box;
+        transform-origin: 50% 50%;
+        transform: rotate(90deg);
+    }
 }

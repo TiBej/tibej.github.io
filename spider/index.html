@@ -9,9 +9,13 @@
     <link media="all" rel="stylesheet" href="css/main.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        window.jQuery || document.write('<script src="js/jquery-3.3.1.min.js"><\/script>')
+        window.jQuery || document.write('<script src="js/library/jquery-3.3.1.min.js"><\/script>')
     </script>
     <script src="js/jquery.main.js"></script>
+
+
+
+
 </head>
 
 <body>
@@ -29,10 +33,7 @@
                                         <div class="hover-box">
                                             <strong class="title" v-html="tool.name"></strong>
                                             <div class="box-wrap">
-                                                <span class="text-transform">Titel</span>
-                                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolore in id reiciendis vel nemo non sunt voluptatem. Neque, nihil provident ullam consequatur aliquam explicabo, ex, aspernatur doloribus culpa
-                                                    suscipit voluptate?</p>
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis accusantium autem unde! Harum, repellat dolor fugiat maxime laudantium.</p>
+                                                <p v-html="tool.description"></p>
                                             </div>
                                             <div class="box-wrap">
                                                 <span class="text-transform">LEHR/LERNSZENARIEN</span>
@@ -53,8 +54,8 @@
                                                     <li>
                                                         III. Überprüfung
                                                         <ul class="sub-list-detail">
-                                                            <li>-Pradukt <span class="arrow">></span></li>
-                                                            <li>-Klausur <span class="arrow">></span></li>
+                                                            <li>- Produkt <span class="arrow">></span></li>
+                                                            <li>- Klausur <span class="arrow">></span></li>
                                                         </ul>
                                                     </li>
                                                     <li>IV Evaluation <span class="arrow">></span></li>
@@ -74,10 +75,10 @@
                                 <a href="#" class="opener link-item">MEDIENPÄDAGOGISCHE SETTINGS</a>
                                 <div class="slide slide-close">
                                     <div class="bg-yellow">
-                                        <ul class="list-items">
+                                        <ul class="list-items unhover hover-white">
                                             <li><a href="#">Kommunikation</a></li>
                                             <li><a href="#">Kollaboration</a></li>
-                                            <li><a href="#">Überprufung</a></li>
+                                            <li><a href="#">Überprüfung</a></li>
                                             <li><a href="#">Evaluation</a></li>
                                         </ul>
                                     </div>
@@ -110,7 +111,8 @@
                     </div>
                     <div class="detail-box">
                         <ul class="list-detail-area">
-                            <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 3))).some(t => t.name == activeToolName))" class="inner-open-close">
+                            <!-- case 3 (Kommunikation) can not be listed with the current design-->
+                            <li v-bind:class="(toolList.filter(t => t.scenario.some(sc => (sc == 1 || sc == 2 ))).some(t => t.name == activeToolName)) ? '' : 'hidden'" class="inner-open-close">
                                 <a href="#" class="inner-opener">Kommunikation</a>
                                 <div class="inner-slide">
                                     <ul class="list-detail-area-medium">
@@ -137,7 +139,7 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 3))).some(t => t.name == activeToolName))" class="inner-open-close">
+                            <li v-bind:class="(toolList.filter(t => t.scenario.some(sc => (sc == 3))).some(t => t.name == activeToolName)) ? '' : 'hidden'" class="inner-open-close">
                                 <a href="#" class="inner-opener">Kollaboration</a>
                                 <div class="inner-slide">
                                     <div class="inner-items">
@@ -149,11 +151,11 @@
                                     </div>
                                 </div>
                             </li>
-                            <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 5 || sc == 6 || sc == 7 || sc == 8 || sc == 9 || sc == -1))).some(t => t.name == activeToolName))" class="inner-open-close">
+                            <li v-bind:class="(toolList.filter(t => t.scenario.some(sc => (sc == 5 || sc == 6 || sc == 7 || sc == 8 || sc == 9 || sc == -1))).some(t => t.name == activeToolName)) ? '' : 'hidden'" class="inner-open-close">
                                 <a href="#" class="inner-opener">Überprüfung</a>
                                 <div class="inner-slide">
                                     <ul class="list-detail-area-medium">
-                                        <li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 5))).some(t => t.name == activeToolName))">
                                             <a href="#" v-bind:class="[(toolList.filter(t => t.scenario.includes(5)).some(t => t.name == activeToolName)) ? 'active' : '']">formativ</a>
                                             <div class="inner-items">
                                                 <ul class="sub-items">
@@ -163,7 +165,7 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 6))).some(t => t.name == activeToolName))">
                                             <a href="#" v-bind:class="[(toolList.filter(t => t.scenario.includes(6)).some(t => t.name == activeToolName)) ? 'active' : '']">summativ</a>
                                             <div class="inner-items">
                                                 <ul class="sub-items">
@@ -173,7 +175,7 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 7))).some(t => t.name == activeToolName))">
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(7)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Produkt</a>
                                             <div class="inner-items">
                                                 <ul class="sub-items">
@@ -183,7 +185,7 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 8))).some(t => t.name == activeToolName))">
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(8)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Klausur</a>
                                             <div class="inner-items">
                                                 <ul class="sub-items">
@@ -193,7 +195,7 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 9))).some(t => t.name == activeToolName))">
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(9)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Mündliche Prüfung</a>
                                             <div class="inner-items">
                                                 <ul class="sub-items">
@@ -203,7 +205,7 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == -1))).some(t => t.name == activeToolName))">
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(-1)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Plagiatsprävention</a>
                                             <div class="inner-items">
                                                 <ul class="sub-items">
@@ -216,11 +218,11 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 10 || sc == 11))).some(t => t.name == activeToolName))" class="inner-open-close">
+                            <li v-bind:class="(toolList.filter(t => t.scenario.some(sc => (sc == 10 || sc == 11))).some(t => t.name == activeToolName)) ? '' : 'hidden'" class="inner-open-close">
                                 <a href="#" class="inner-opener">Evalution</a>
                                 <div class="inner-slide">
                                     <ul class="list-detail-area-medium">
-                                        <li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 10))).some(t => t.name == activeToolName))">
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(10)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Evalution</a>
                                             <div class="inner-items">
                                                 <ul class="sub-items">
@@ -230,7 +232,7 @@
                                                 </ul>
                                             </div>
                                         </li>
-                                        <li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 11))).some(t => t.name == activeToolName))">
                                             <a v-bind:class="[(toolList.filter(t => t.scenario.includes(11)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Selbstevalution</a>
                                             <div class="inner-items">
                                                 <ul class="sub-items">
@@ -245,13 +247,28 @@
                             </li>
                         </ul>
                     </div>
+
+                    <div class="spider-box">
+                        <div class="main_animation_conteiner">
+                            <svg version="1.1" id="multiCircles"  preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                 y="0px" width="2000" height="1000" viewBox="0 0 2000 1000" enable-background="new 0 0 2000 1000" xml:space="preserve">
+                                <g>
+                                    <rect class="svgClickToStart" stroke="none" stroke-width="2" fill="transparent" x="0" y="0" width="2000" height="1000"/>
+                                </g>
+                                <g class="classMCcontainer">
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
     <script src="js/vue.js "></script>
     <script src="js/module.js "></script>
+    <script src="js/spider/model.js"></script>
+    <script src="js/library/gs3.min.js"></script>
+    <script src="js/spider/render.js"></script>
 </body>
 
 </html>c
