@@ -33,7 +33,7 @@ function initShowItems() {
         jQuery('.spider-box').removeClass('active');
     });
 
-    jQuery('.list-items.unhover').click(function(e) {
+    jQuery('.opener.link-item.spider').click(function(e) {
         e.preventDefault();
         jQuery('.list-items:not(.unhover) a').removeClass('active');
         jQuery('.spider-box').addClass('active');
@@ -46,6 +46,7 @@ function initShowItems() {
     jQuery('.collapse-menu .opener').click(function() {
         jQuery('body').removeClass('detail-active');
         jQuery('.list-items a').removeClass('active');
+        jQuery('.spider-box').removeClass('active');
 
     });
     /*jQuery('.open-close .opener').click(function(e){
