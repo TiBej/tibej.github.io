@@ -24,7 +24,8 @@
             <div class="items-row">
                 <div class="col open-close">
                     <div class="">
-                        <a href="#" onClick="window.location.reload();" class="link-yellow link-item">MENU</a>
+                        <a v-if="activeToolName == ''" href="#" onClick="window.location.reload();" class="link-item">Tools</a>
+                        <a v-if="activeToolName != ''" href="#" onClick="window.location.reload();" class="link-item">Home</a>
                         <div class="No!slide">
                             <div class="bg-black">
                                 <ul v-for="tool in filteredTools" class="list-items hovererd-area">
@@ -49,16 +50,16 @@
                                             <div class="box-wrap">
                                                 <span class="text-transform">MEDIENPÄDAGOGISCHE  SETTINGS</span>
                                                 <ul class="list-details has-bg">
-                                                    <li>I. Kommunikation <span class="arrow">></span></li>
-                                                    <li>II. Kollaboration <span class="arrow">></span></li>
+                                                    <li>I. Kommunikation</span></li>
+                                                    <li>II. Kollaboration</span></li>
                                                     <li>
                                                         III. Überprüfung
                                                         <ul class="sub-list-detail">
-                                                            <li>- Produkt <span class="arrow">></span></li>
-                                                            <li>- Klausur <span class="arrow">></span></li>
+                                                            <li>- Produkt</span></li>
+                                                            <li>- Klausur</span></li>
                                                         </ul>
                                                     </li>
-                                                    <li>IV Evaluation <span class="arrow">></span></li>
+                                                    <li>IV Evaluation</span></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -72,17 +73,7 @@
                     <div class="cols-wrap">
                         <div class="col open-close med">
                             <div class="active">
-                                <a href="#" class="opener link-item">MEDIENPÄDAGOGISCHE SETTINGS</a>
-                                <div class="slide slide-close">
-                                    <div class="bg-yellow">
-                                        <ul class="list-items unhover hover-white">
-                                            <li><a href="#">Kommunikation</a></li>
-                                            <li><a href="#">Kollaboration</a></li>
-                                            <li><a href="#">Überprüfung</a></li>
-                                            <li><a href="#">Evaluation</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <a href="#" class="opener link-item spider">MEDIENPÄDAGOGISCHE SETTINGS</a>
                             </div>
                         </div>
                         <div class="col open-close increase-width collapse-menu active">
@@ -91,7 +82,7 @@
                                 <div class="slide slide-800">
                                     <div class="bg-white">
                                         <ul class="list-detail-area">
-                                            <li><a href="#" v-on:click="filterBy([12])" v-bind:class="['selection-opener', (activeFilterArr.includes(12)) ? 'active' : '']">Angereicherte Prasenzlehre</a></li>
+                                            <li><a href="#" v-on:click="filterBy([12])" v-bind:class="['selection-opener', (activeFilterArr.includes(12)) ? 'active' : '']">Angereicherte Präsenzlehre</a></li>
                                             <li><a href="#" v-on:click="filterBy([13])" v-bind:class="['selection-opener', (activeFilterArr.includes(13)) ? 'active' : '']">Blended Learning</a></li>
                                             <li><a href="#" v-on:click="filterBy([14])" v-bind:class="[ 'selection-opener', (activeFilterArr.includes(14)) ? 'active' : '']">Hybrid Distance Learning</a></li>
                                             <li><a href="#" v-on:click="filterBy([15, 16, 17])" v-bind:class="[ 'selection-opener', (activeFilterArr.includes(15) && activeFilterArr.includes(16) && activeFilterArr.includes(17)) ? 'active' : '']">Distance Learning</a></li>
@@ -271,4 +262,4 @@
     <script src="js/spider/render.js"></script>
 </body>
 
-</html>c
+</html>
