@@ -964,9 +964,9 @@ a {
     transition: all .4s ease;
 }
 
-.list-details.has-bg li:hover {
+/*.list-details.has-bg li:hover {
     background: #fff;
-}
+}*/
 
 .sub-list-detail {
     padding: 0 15px 0 35px;
