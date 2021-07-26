@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=1200, initial-scale=1">
+    <title>Navigation</title>
+    <link media="all" rel="stylesheet" href="css/main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/library/jquery-3.3.1.min.js"><\/script>')
+    </script>
+    <script src="js/jquery.main.js"></script>
+
+
+
+
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="navigation-row">
+            <div class="items-row">
+                <div class="col open-close">
+                    <div class="">
+                        <a v-if="activeToolName == ''" href="#" onClick="window.location.reload();" class="link-item">Tools</a>
+                        <a v-if="activeToolName != ''" href="#" onClick="window.location.reload();" class="link-item">Home</a>
+                        <div class="No!slide">
+                            <div class="bg-black">
+                                <ul v-for="tool in filteredTools" class="list-items hovererd-area">
+                                    <li>
+                                        <a href="#" v-on:click="activeToolName = tool.name" v-html="tool.name"></a>
+                                        <div class="hover-box">
+                                            <strong class="title" v-html="tool.name"></strong>
+                                            <div class="box-wrap">
+                                                <p v-html="tool.description"></p>
+                                            </div>
+                                            <div class="box-wrap">
+                                                <span class="text-transform">LEHR-/LERNSZENARIEN</span>
+                                                <ul class="list-details">
+                                                    <li v-if="hasScenario(tool, 12)"><span href="#" data-tooltip="Anreicherung der Präsenzlehre durch Bereitstellung begleitender Materialien. Files (PDF, Word etc.) zu den Veranstaltungen werden begleitend online, bspw. auf dem LMS Moodle bereitgestellt.Den Kommunikations- und Kooperationsmedien wird eine didaktische Funktion zugewiesen. Über ein LMS wie Moodle können Materialien ausgetauscht, Foren, Wikis und mehr erstellt werden.">Angereichterte Präsenzlehre<sup>(?)</sup></span></li>
+                                                    <li v-if="hasScenario(tool, 13)"><span href="#" data-tooltip="Integrative Kombination und Verzahnung von Online- und Präsenzphasen.Die Onlinephasen sind integraler Teil der Veranstaltung und bieten Raum für u.a. Gruppenaustausch, Übungen, Selbstlernmaterialien, Visualisierungen, interaktive Animationen oder Self-Assessments. Eine enge Verzahnung der Online- und Präsenzphasen entsteht durch didaktisch sinnvolle Verknüpfung.Bei synchronen Präsenzphasen sind alle Teilnehmenden im selben Setting dabei, d.h. alle Studierenden vor Ort in Präsenz im Seminarraum oder im webbasieren Raum einer kollaborativen 3D-Umgebung in Form von Avataren.">Blended Learning<sup>(?)</sup></span></li>
+                                                    <li v-if="hasScenario(tool, 14)"><span href="#" data-tooltip="Ein Teil der Studierenden oder Teilnehmenden sind in physischer Präsenz anwesend und parallel dazu ein anderer Teil der gleichen LV-Gruppe von «remote» bspw. «zu Hause» verbunden. Eine Veranstaltung kann in synchronen parallelen Settings (Präsenz & remote) durchgeführt werden oder diese werden als «Hybrid-Präsenzphasen» zwischen reinen Online-Phasen konzeptioniert. Dieses Remote- und Live-Setting bedarf eines hohen Aufwandes bezüglich Organisation, Planung und eine professionellen Kommunikations- bzw. Moderationskompetenz sowie technologisches Know-How. Das Modell lässt sich erweitern durch verschiedene in Präsenz stattfindende Angebote wie Sprechstunden, Gruppenarbeiten, Tutorate mit Übungsgruppen etc.">Hybrid Distance Learning<sup>(?)</sup></span></li>
+                                                    <li v-if="hasScenario(tool, 15)"><span href="#" data-tooltip="«Distance Learning» ist als Oberbegriff eines Lehr-/Lernsettings zu verstehen, welches ausschliesslich „online“ stattfindet; d.h. Lernen/Lehren über eine gewisse Distanz, ohne «face-to-face» in physischer Anwesenheit oder Präsenz. Die Hauptunterscheidung liegt hier in synchroner und asynchroner Kommunikation oder einer Mischung beider Kommunikationsformen.">Distance Learning webbasiert<sup>(?)</sup></span></li>
+                                                    <li v-if="hasScenario(tool, 16)"><span href="#" data-tooltip="Rein synchrone Umsetzung eines Lehr-/Lernsettings ohne physische Präsenz und ohne asynchrone Anteile. Nutzung einer entsprechenden Kommunikationsplattform wie ein Audio-/Videokonferenzsystem oder eine kollaborative 3D Umgebung.">Distance Learning synchron<sup>(?)</sup></span></li>
+                                                    <li v-if="hasScenario(tool, 17)"><span href="#" data-tooltip="Rein asynchrone Umsetzung eines Lehr-/Lernsettings ohne physische Präsenz und ohne synchrone Anteile. Nutzung einer entsprechenden Kommunikationsplattform wie LMS Moodle, oder Dokumentenablagesysteme, Videoplattformen etc.">Distance Learning asynchron<sup>(?)</sup></span></li>
+                                                </ul>
+                                            </div>
+                                            <div class="box-wrap">
+                                                <span class="text-transform">MEDIENPÄDAGOGISCHE  SETTINGS</span>
+                                                <ul class="list-details has-bg">
+                                                    <li>I. Kommunikation</span></li>
+                                                    <li>II. Kollaboration</span></li>
+                                                    <li>
+                                                        III. Überprüfung
+                                                        <!--<ul class="sub-list-detail">
+                                                            <li>- Produkt</span></li>
+                                                            <li>- Klausur</span></li>
+                                                        </ul>-->
+                                                    </li>
+                                                    <li>IV Evaluation</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="items-wrap">
+                    <div class="cols-wrap">
+                        <div class="col open-close med">
+                            <div class="active">
+                                <a href="#" class="opener link-item spider">MEDIENPÄDAGOGISCHE SETTINGS</a>
+                            </div>
+                        </div>
+                        <div class="col open-close increase-width collapse-menu active">
+                            <div class="">
+                                <a href="#" class="opener link-item">LEHR-/ LERNSZENARIEN</a>
+                                <div class="slide slide-800">
+                                    <div class="bg-white">
+                                        <ul class="list-detail-area">
+                                            <li><a href="#" v-on:click="filterBy([12])" v-bind:class="['selection-opener', (activeFilterArr.includes(12)) ? 'active' : '']">Angereicherte Präsenzlehre</a></li>
+                                            <li><a href="#" v-on:click="filterBy([13])" v-bind:class="['selection-opener', (activeFilterArr.includes(13)) ? 'active' : '']">Blended Learning</a></li>
+                                            <li><a href="#" v-on:click="filterBy([14])" v-bind:class="[ 'selection-opener', (activeFilterArr.includes(14)) ? 'active' : '']">Hybrid Distance Learning</a></li>
+                                            <li><a href="#" v-on:click="filterBy([15, 16, 17])" v-bind:class="[ 'selection-opener', (activeFilterArr.includes(15) && activeFilterArr.includes(16) && activeFilterArr.includes(17)) ? 'active' : '']">Distance Learning</a></li>
+                                        </ul>
+                                        <ul class="list-row">
+                                            <li><a v-on:click="filterBy([15])" v-bind:class="[(activeFilterArr.includes(15)) ? 'active' : '']" href="#">webbasiert</a></li>
+                                            <li><a v-on:click="filterBy([16])" v-bind:class="[(activeFilterArr.includes(16)) ? 'active' : '']" href="#">synchron</a></li>
+                                            <li><a v-on:click="filterBy([17])" v-bind:class="[(activeFilterArr.includes(17)) ? 'active' : '']" href="#">asynchron</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col open-close">
+                            <input v-model="search" class="link-item" placeholder="(?) Suche_______"></input>
+                        </div>
+                    </div>
+                    <div class="detail-box">
+                        <ul class="list-detail-area">
+                            <!-- case 3 (Kommunikation) can not be listed with the current design-->
+                            <li v-bind:class="(toolList.filter(t => t.scenario.some(sc => (sc == 1 || sc == 2 ))).some(t => t.name == activeToolName)) ? '' : 'hidden'" class="inner-open-close">
+                                <a href="#" class="inner-opener">Kommunikation</a>
+                                <div class="inner-slide">
+                                    <ul class="list-detail-area-medium">
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 1))).some(t => t.name == activeToolName))">
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(1)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">synchron</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(1))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 2))).some(t => t.name == activeToolName))">
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(2)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">asynchron</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(2))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li v-bind:class="(toolList.filter(t => t.scenario.some(sc => (sc == 3))).some(t => t.name == activeToolName)) ? '' : 'hidden'" class="inner-open-close">
+                                <a href="#" class="inner-opener">Kollaboration</a>
+                                <div class="inner-slide">
+                                    <div class="inner-items">
+                                        <ul class="sub-items adjust-width">
+                                            <li v-for="tool in toolList.filter(t => t.scenario.includes(3))">
+                                                <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
+                            <li v-bind:class="(toolList.filter(t => t.scenario.some(sc => (sc == 5 || sc == 6 || sc == 7 || sc == 8 || sc == 9 || sc == -1))).some(t => t.name == activeToolName)) ? '' : 'hidden'" class="inner-open-close">
+                                <a href="#" class="inner-opener">Überprüfung</a>
+                                <div class="inner-slide">
+                                    <ul class="list-detail-area-medium">
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 5))).some(t => t.name == activeToolName))">
+                                            <a href="#" v-bind:class="[(toolList.filter(t => t.scenario.includes(5)).some(t => t.name == activeToolName)) ? 'active' : '']">formativ</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(5))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 6))).some(t => t.name == activeToolName))">
+                                            <a href="#" v-bind:class="[(toolList.filter(t => t.scenario.includes(6)).some(t => t.name == activeToolName)) ? 'active' : '']">summativ</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(6))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 7))).some(t => t.name == activeToolName))">
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(7)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Produkt</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(7))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 8))).some(t => t.name == activeToolName))">
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(8)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Klausur</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(8))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 9))).some(t => t.name == activeToolName))">
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(9)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Mündliche Prüfung</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(9))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li v-bind:class="(toolList.filter(t => t.scenario.some(sc => (sc == 10 || sc == 11))).some(t => t.name == activeToolName)) ? '' : 'hidden'" class="inner-open-close">
+                                <a href="#" class="inner-opener">Evalution</a>
+                                <div class="inner-slide">
+                                    <ul class="list-detail-area-medium">
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 10))).some(t => t.name == activeToolName))">
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(10)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Evalution</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(10))">
+                                                        <a href="#" v-bind:class="['item-box',(activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li v-if="(toolList.filter(t => t.scenario.some(sc => (sc == 11))).some(t => t.name == activeToolName))">
+                                            <a v-bind:class="[(toolList.filter(t => t.scenario.includes(11)).some(t => t.name == activeToolName)) ? 'active' : '']" href="#">Selbstevalution</a>
+                                            <div class="inner-items">
+                                                <ul class="sub-items">
+                                                    <li v-for="tool in toolList.filter(t => t.scenario.includes(11))">
+                                                        <a href="#" v-bind:class="['item-box', (activeToolName == tool.name) ? 'active' : '']" v-html="tool.name"></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="spider-box">
+                        <div class="main_animation_conteiner">
+                            <svg version="1.1" id="multiCircles"  preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+                                 y="0px" width="2000" height="1000" viewBox="0 0 2000 1000" enable-background="new 0 0 2000 1000" xml:space="preserve">
+                                <g>
+                                    <rect class="svgClickToStart" stroke="none" stroke-width="2" fill="transparent" x="0" y="0" width="2000" height="1000"/>
+                                </g>
+                                <g class="classMCcontainer">
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/vue.js "></script>
+    <script src="js/module.js "></script>
+    <script src="js/spider/model.js"></script>
+    <script src="js/library/gs3.min.js"></script>
+    <script src="js/spider/render.js"></script>
+</body>
+
+</html>
